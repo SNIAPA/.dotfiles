@@ -25,6 +25,8 @@ plugins=(
     tig
     navi
     peco
+    history
+    history-substring-search
 )
 
 # Aliases
