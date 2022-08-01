@@ -2,10 +2,10 @@
 require("presence"):setup({
     -- General options
     auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
-    neovim_image_text   = "Programering", -- Text displayed when hovered over the Neovim image
-    main_image          = "file",                   -- Main image display (either "neovim" or "file")
+    neovim_image_text   = "Programering",             -- Text displayed when hovered over the Neovim image
+    main_image          = "file",                     -- Main image display (either "neovim" or "file")
     log_level           = nil,                        -- Log messages at or above this level (one of the following: "debug", "info", "warn", "error")
-    enable_line_number  = true,                      -- Displays the current line number instead of the current project
+    enable_line_number  = true,                       -- Displays the current line number instead of the current project
     blacklist           = {},                         -- A list of strings or Lua patterns that disable Rich Presence if the current file name, path, or workspace matches
     buttons             = true,                       -- Configure Rich Presence button(s), either a boolean to enable/disable, a static table (`{{ label = "<label>", url = "<url>" }, ...}`, or a function(buffer: string, repo_url: string|nil): table)
 
