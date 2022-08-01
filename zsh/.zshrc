@@ -25,11 +25,10 @@ plugins=(
     tig
     navi
     peco
-    history
-    history-substring-search
+    atuin
 )
 
-# Aliases
+# aliases
 alias nv="nvim"
 alias sudo="sudo "
 alias ls='ls --color=auto'
@@ -47,3 +46,10 @@ parse_git_branch() {
 setopt prompt_subst
 autoload -U colors && colors
 export PROMPT=' %F{8}[%F{4}%n%F{9}@%F{6}%M%F{8}]%f $(parse_git_branch)%F{3}%1~%f $ '
+
+
+# historu
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt INC_APPEND_HISTORY
