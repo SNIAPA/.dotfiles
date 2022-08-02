@@ -146,7 +146,7 @@ local mappings = {
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-
+      "Workspace Symbols"
     },
   },
   s = {
