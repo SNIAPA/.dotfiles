@@ -86,7 +86,7 @@ local mappings = {
   },
   e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   w = { "<cmd>w!<CR>", "Save" },
-  W = { "<cmd>wq!<CR>", "Save and Quit" },
+  W = { "<cmd>wa!<CR>", "Save All" },
   q = { "<cmd>q!<CR>", "Quit" },
   Q = { "<cmd>qa!<CR>", "Quit All" },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -140,21 +140,13 @@ local mappings = {
     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next Diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
+
     },
   },
   s = {
