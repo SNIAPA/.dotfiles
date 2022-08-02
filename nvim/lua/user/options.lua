@@ -33,7 +33,8 @@ local options = {
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
-  shell = "/usr/bin/zsh",                   -- set the default shell to zsh
+  shell = "/usr/bin/zsh",                  -- set the default shell to zsh
+  cc = "80",                               -- add colored line at the 80 column 
 }
 
 vim.opt.shortmess:append "c"
