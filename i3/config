@@ -209,11 +209,22 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
+
+# gaps
 gaps inner 20
 gaps outer 5
+
+#colosrs
 # class                         border          background      text            indicator       child_border
-client.focused                  #ebdbb2         #000000         #ffff33         $coloratt       #000000
-client.focused_inactive         #333333         #000000         #ffff33         $coloratt       #000000
-client.unfocused                #333333         #000000         #888888         $coloratt       #000000
-client.urgent                   #2f343a         #900000         #ffffff         $coloratt       #900000
-client.placeholder              #000000         #000000         #ffffff         $coloratt       #0c0c0c
+client.focused                  #fe8019         #282828         #ebdbb2         $coloratt       #1d2021
+client.focused_inactive         #282828         #282828         #ebdbb2         $coloratt       #1d2021
+client.unfocused                #282828         #282828         #ebdbb2         $coloratt       #1d2021
+client.urgent                   #282828         #282828         #ebdbb2         $coloratt       #1d2021
+client.placeholder              #282828         #282828         #ebdbb2         $coloratt       #1d2021
+
+#startups
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id picom -CGb
+
+#font
+font pango:Hack normal 10
