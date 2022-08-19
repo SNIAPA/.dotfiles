@@ -228,3 +228,6 @@ exec --no-startup-id picom -CGb
 
 #font
 font pango:Hack normal 10
+
+# custom changes
+focus_follows_mouse no
