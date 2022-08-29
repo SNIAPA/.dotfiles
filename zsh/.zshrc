@@ -48,12 +48,16 @@ autoload -U colors && colors
 export PROMPT=' %F{8}[%F{4}%n%F{9}@%F{6}%M%F{8}]%f $(parse_git_branch)%F{3}%1~%f $ '
 
 
-# historu
+#histfile
+
+#fix for corruption
+
+FILTERED=$(strings -eS ~/.histfile)
+echo $FILTERED > ~/.histfile
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt INC_APPEND_HISTORY
 
-# neofethc 
 neofetch
 
