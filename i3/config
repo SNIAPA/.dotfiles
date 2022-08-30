@@ -44,7 +44,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up j
-set $doww k
+set $down k
 set $left l
 set $right ;
 
