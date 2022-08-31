@@ -24,6 +24,8 @@
     gruvbox-dark-fg1:          #ebdbb2;
     gruvbox-dark-red-dark:     #cc241d;
     gruvbox-dark-red-light:    #fb4934;
+    gruvbox-dark-green-dark:   #98971a;
+    gruvbox-dark-green-light:  #b8bb26;
     gruvbox-dark-yellow-dark:  #d79921;
     gruvbox-dark-yellow-light: #fabd2f;
     gruvbox-dark-gray:         #a89984;
@@ -32,7 +34,7 @@
     background:                  @gruvbox-dark-bg0-hard;
     background-color:            @background;
     foreground:                  @gruvbox-dark-fg1;
-    border-color:                @gruvbox-dark-gray;
+    border-color:                @gruvbox-dark-green-dark;
     separatorcolor:              @border-color;
     scrollbar-handle:            @border-color;
 
