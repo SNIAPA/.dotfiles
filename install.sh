@@ -9,4 +9,4 @@ ln $(realpath gruvbox-dark-hard.rasi) $(realpath ~) -s
 
 find . -type l | sed -e s'/^\.\///g' > .gitignore
 
-nitrogen --set-auto wallpaper.png
+nitrogen --set-auto wallpaper.png --save
