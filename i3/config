@@ -215,9 +215,10 @@ client.urgent                   #282828         #282828         #ebdbb2         
 client.placeholder              #282828         #282828         #ebdbb2         $coloratt       #1d2021
 
 #startups
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id picom -CGb
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id picom -CGb
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id conky
 
 #font
 font pango:Hack normal 8
