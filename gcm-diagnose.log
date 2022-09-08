@@ -1,0 +1,162 @@
+﻿Diagnose log at 2022-09-08T06:07:05Z
+
+Executable: /usr/share/git-credential-manager-core/git-credential-manager-core
+Version: 2.0.785+6074e4e3d3
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Linux
+OSVersion: Linux samsung-smart-airfryer 5.19.5-arch1-1 #1 SMP PREEMPT_DYNAMIC Mon, 29 Aug 2022 15:51:05 +0000 x86_64 GNU/Linux
+Reading environment variables... OK
+ Variables:
+XDG_SESSION_CLASS=user
+MOTD_SHOWN=pam
+LANG=en_US.UTF-8
+WINDOWID=31457282
+USER=saian
+DISPLAY=:0
+XDG_SESSION_TYPE=tty
+XAUTHORITY=/home/saian/.lyxauth
+PROMPT= %F{8}[%F{4}%n%F{9}@%F{6}%M%F{8}]%f $(parse_git_branch)%F{3}%1~%f $ 
+XDG_SEAT=seat0
+XDG_SESSION_ID=1
+ALACRITTY_LOG=/tmp/Alacritty-3437.log
+OLDPWD=/home/saian
+COLORTERM=truecolor
+PATH=/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+SHELL=/bin/zsh
+TERM=alacritty
+MAIL=/var/spool/mail/saian
+SHLVL=1
+LC_CTYPE=en_US.UTF-8
+ALACRITTY_SOCKET=/run/user/1000/Alacritty-:0-3437.sock
+XDG_RUNTIME_DIR=/run/user/1000
+I3SOCK=/run/user/1000/i3/ipc-socket.931
+XDG_VTNR=2
+LOGNAME=saian
+HOME=/home/saian
+PWD=/home/saian/.dotfiles
+GTK_MODULES=canberra-gtk-module
+_=/sbin/git-credential-manager-core
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is '/tmp/'...
+Checking basic file I/O...
+Writing to temporary file '/tmp/53824b939bf2c48e1323c7df'... OK
+Reading from temporary file '/tmp/53824b939bf2c48e1323c7df'... OK
+Deleting temporary file '/tmp/53824b939bf2c48e1323c7df'... OK
+Testing IFileSystem instance...
+UserHomePath: /home/saian
+UserDataDirectoryPath: /home/saian/.gcm
+GetCurrentDirectory(): /home/saian/.dotfiles
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking basic networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:37001/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+Testing with IHttpClientFactory created HTTP client...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:40401/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.37.3'
+Locating current repository... OK
+Git repository at '/home/saian/.dotfiles/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:/home/saian/.gitconfig	user.email=wasilewskihubers@gmail.com
+file:/home/saian/.gitconfig	user.name=SAIAN
+file:/home/saian/.gitconfig	credential.helper=
+file:/home/saian/.gitconfig	credential.helper=/usr/share/git-credential-manager-core/git-credential-manager-core
+file:/home/saian/.gitconfig	credential.credentialstore=gpg
+file:/home/saian/.gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.origin.url=https://github.com/SNIAPA/.dotfiles
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker not supported.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: /home/saian/.local/.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: /home/saian/.local/.IdentityService/msal.cache
+KeyringCollection: 
+KeyringSchemaName: 
+KeyringSecretLabel: 
+KeyringAttribute1: (,)
+KeyringAttribute2: (,)
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
