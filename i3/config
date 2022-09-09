@@ -43,10 +43,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up j
+set $left j
 set $down k
-set $left l
-set $right ;
+set $up l
+set $right semicolon
 
 # use Mouse+$mod to drag floating windows to their wanted position
 # floating_modifier $mod
@@ -208,11 +208,11 @@ gaps outer 5
 
 #colosrs
 # class                         border          background      text            indicator       child_border
-client.focused                  #fe8019         #282828         #ebdbb2         $coloratt       #1d2021
-client.focused_inactive         #282828         #282828         #ebdbb2         $coloratt       #1d2021
-client.unfocused                #282828         #282828         #ebdbb2         $coloratt       #1d2021
-client.urgent                   #282828         #282828         #ebdbb2         $coloratt       #1d2021
-client.placeholder              #282828         #282828         #ebdbb2         $coloratt       #1d2021
+client.focused                  #fe8019         #282828         #ebdbb2         #000000         #1d2021
+client.focused_inactive         #282828         #282828         #ebdbb2         #000000         #1d2021
+client.unfocused                #282828         #282828         #ebdbb2         #000000         #1d2021
+client.urgent                   #282828         #282828         #ebdbb2         #000000         #1d2021
+client.placeholder              #282828         #282828         #ebdbb2         #000000         #1d2021
 
 #startups
 exec_always --no-startup-id nitrogen --restore
