@@ -61,3 +61,5 @@ setopt INC_APPEND_HISTORY
 
 neofetch
 
+#path
+PATH="$HOME/.local/bin:$PATH"
