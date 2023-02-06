@@ -6,10 +6,10 @@ for config in "${configs[@]}"; do
 
   if [ -e $(realpath ~/".config/${config}") ]
   then
-    echo "${config} config already exists" 
-  else 
-    ln -s $(realpath ./"${config}") $(realpath ~/".config/${config}")
+    echo "${config} config already exists relinking" 
+		rm -rdf $(realpath ~/".config/${config}")
   fi
+  ln -s $(realpath ./"${config}") $(realpath ~/".config/${config}")
 
 done
 

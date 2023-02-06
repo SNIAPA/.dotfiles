@@ -26,10 +26,6 @@ set $down  j
 set $up    k
 set $right l
 
-# Gaps
-gaps inner 9
-gaps outer 3
-
 # Colors         border       background   text         indicator    child_border
 client.focused   #e5e5e5      #000000      #cccccc      #000000      #e5e5e5
 client.unfocused #323232      #000000      #cccccc      #000000      #323232
