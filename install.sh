@@ -1,13 +1,15 @@
-pushd .
-ln $(realpath picom.conf) $(realpath ~/.config/picom.conf) -s
-ln $(realpath zsh/.zshrc) $(realpath ~/.zshrc) -s
-ln $(realpath polybar) $(realpath ~/.config/polybar) -s
-ln $(realpath nvim) $(realpath ~/.config/nvim) -s
-ln $(realpath i3) $(realpath ~/.config/i3) -s
-ln $(realpath rofi) $(realpath ~/.config/rofi) -s
-ln $(realpath alacritty) $(realpath ~/.config/alacritty) -s
-ln $(realpath conky) $(realpath ~/.config/conky) -s
+pushd "$(dirname "$0")"
 
-find . -type l | sed -e s'/^\.\///g' > .gitignore
+configs=("i3" "picom" "polybar" "conky" "wallpapers" "rofi" "nvim" "alacritty")
 
-nitrogen --set-auto wallpaper.png --save
+for config in "${configs[@]}"; do 
+
+  if [ -e $(realpath ~/".config/${config}") ]
+  then
+    echo "${config} config already exists" 
+  else 
+    ln -s $(realpath ./"${config}") $(realpath ~/".config/${config}")
+  fi
+
+done
+

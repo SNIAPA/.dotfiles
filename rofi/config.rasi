@@ -1,13 +1,12 @@
 configuration {
-	modes: "drun";
-  show: "drun";
-	font: "hack 10";
+	modes: "drun,ssh";
+/*	font: "mono 12";*/
 /*	location: 0;*/
-/*	yoffset: 0;*/
-/*	xoffset: 0;*/
+yoffset: 0;
+xoffset: 0;
 /*	fixed-num-lines: true;*/
-  show-icons: true;
-/*	terminal: "rofi-sensible-terminal";*/
+show-icons: true;
+terminal: "alacritty";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
@@ -15,7 +14,7 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
- 	icon-theme: "Papirus";
+/*	icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -27,13 +26,13 @@ configuration {
 /*	sorting-method: "normal";*/
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
-/*	sidebar-mode: false;*/
-/*	hover-select: false;*/
+	sidebar-mode: true;
+	hover-select: true;
 /*	eh: 1;*/
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-/*	combi-modes: "window,run";*/
+/*	combi-modes: "ssh,drun";*/
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
@@ -85,7 +84,7 @@ configuration {
 /*	kb-accept-custom-alt: "Control+Shift+Return";*/
 /*	kb-accept-alt: "Shift+Return";*/
 /*	kb-delete-entry: "Shift+Delete";*/
-/*	kb-mode-next: "Shift+Right,Control+Tab";*/
+	kb-mode-next: "Alt+Tab";
 /*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
 /*	kb-mode-complete: "Control+l";*/
 /*	kb-row-left: "Control+Page_Up";*/
@@ -150,4 +149,5 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/gruvbox-dark-hard.rasi"
+
+@theme "theme.rasi"
