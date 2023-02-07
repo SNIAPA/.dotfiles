@@ -84,20 +84,25 @@ _G.packer_plugins = {
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  ["cmp-cmdline"] = {
-    loaded = true,
-    path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["dashboard-nvim"] = {
     loaded = false,
@@ -105,6 +110,11 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/saian/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/saian/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["git-blame.nvim"] = {
     loaded = true,
@@ -115,6 +125,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
+  },
+  ["lsp-zero.nvim"] = {
+    loaded = true,
+    path = "/home/saian/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -146,30 +161,15 @@ _G.packer_plugins = {
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
   },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/home/saian/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/home/saian/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-snippy"] = {
-    loaded = true,
-    path = "/home/saian/.local/share/nvim/site/pack/packer/start/nvim-snippy",
-    url = "https://github.com/dcampos/nvim-snippy"
   },
   ["nvim-treesitter"] = {
     loaded = true,
