@@ -44,8 +44,8 @@ return packer.startup(function(use)
 	use 'preservim/nerdtree'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
-
 	use 'folke/which-key.nvim'
+	use 'f-person/git-blame.nvim'
 
 	use {'nvim-treesitter/nvim-treesitter',
 	  run = ':TSUpdate'

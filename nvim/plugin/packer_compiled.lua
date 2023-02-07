@@ -81,6 +81,11 @@ _G.packer_plugins = {
     path = "/home/hubert.wasilewski/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["git-blame.nvim"] = {
+    loaded = true,
+    path = "/home/hubert.wasilewski/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
+    url = "https://github.com/f-person/git-blame.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/hubert.wasilewski/.local/share/nvim/site/pack/packer/start/lualine.nvim",
