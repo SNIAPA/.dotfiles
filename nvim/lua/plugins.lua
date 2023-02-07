@@ -53,6 +53,9 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  use 'williamboman/mason.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason-lspconfig.nvim'
 
 
 	use {'nvim-treesitter/nvim-treesitter',
