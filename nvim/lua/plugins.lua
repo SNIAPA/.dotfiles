@@ -47,16 +47,23 @@ return packer.startup(function(use)
 	use 'folke/which-key.nvim'
 	use 'f-person/git-blame.nvim'
 	use 'kdheepak/lazygit.nvim'
+
 	use 'hrsh7th/nvim-cmp'
-  use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
-  use 'williamboman/mason.nvim'
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/mason-lspconfig.nvim'
 
+  use 'ray-x/lsp_signature.nvim'
+
+  use 'L3MON4D3/LuaSnip'
+  use 'dcampos/nvim-snippy'
+
+  use 'neovim/nvim-lspconfig'
+  use 'mfussenegger/nvim-dap'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
 
 	use {'nvim-treesitter/nvim-treesitter',
 	  run = ':TSUpdate'
