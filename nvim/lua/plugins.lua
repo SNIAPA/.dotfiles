@@ -43,29 +43,22 @@ return packer.startup(function(use)
 	use 'majutsushi/tagbar'
 	use 'tpope/vim-commentary'
 	use 'preservim/nerdtree'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
 
-	use {'folke/which-key.nvim',
-	  config = require('plugins.which-key')
-	}
+	use 'folke/which-key.nvim'
 
 	use {'nvim-treesitter/nvim-treesitter',
-	  run = ':TSUpdate',
-		config = require('plugins.treesitter')
+	  run = ':TSUpdate'
 	}
 
 	use { "bluz71/vim-moonfly-colors",
-		as = "moonfly",
-		config = require('plugins.moonfly')
+		as = "moonfly"
 	}
 
 	use {
   'glepnir/dashboard-nvim',
   event = 'VimEnter',
-  config = function()
-    require('dashboard').setup {
-
-    }
-  end,
   requires = {'nvim-tree/nvim-web-devicons'}
 }
 end

@@ -34,4 +34,3 @@ client.urgent    #ffffff      #000000      #cccccc      #000000      #ffffff
 # Settings
 focus_follows_mouse no
 show_marks yes
-tiling_drag modifier titlebar

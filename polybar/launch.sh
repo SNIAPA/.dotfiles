@@ -1,3 +1,3 @@
 killall polybar
 
-polybar mainscreen
+polybar mainscreen --config="./config.ini"

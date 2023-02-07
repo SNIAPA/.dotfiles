@@ -1,3 +1,4 @@
+#!/bin/bash
 pushd "$(dirname "$0")"
 
 configs=("i3" "picom" "polybar" "conky" "wallpapers" "rofi" "nvim" "alacritty")
