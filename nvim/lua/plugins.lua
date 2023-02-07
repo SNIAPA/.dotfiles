@@ -39,7 +39,6 @@ packer.init({
 return packer.startup(function(use)
 
 	use 'wbthomason/packer.nvim'
-	use 'nvim-lua/plenary.nvim'
 	use 'majutsushi/tagbar'
 	use 'tpope/vim-commentary'
 	use 'preservim/nerdtree'
@@ -57,9 +56,15 @@ return packer.startup(function(use)
 	}
 
 	use {
-  'glepnir/dashboard-nvim',
-  event = 'VimEnter',
-  requires = {'nvim-tree/nvim-web-devicons'}
-}
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    requires = {'nvim-tree/nvim-web-devicons'}
+  }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
 end
 )

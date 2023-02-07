@@ -81,6 +81,11 @@ _G.packer_plugins = {
     path = "/home/hubert.wasilewski/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/hubert.wasilewski/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   moonfly = {
     loaded = true,
     path = "/home/hubert.wasilewski/.local/share/nvim/site/pack/packer/start/moonfly",
