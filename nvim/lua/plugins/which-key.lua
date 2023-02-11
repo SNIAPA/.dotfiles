@@ -2,7 +2,7 @@ return  { 'folke/which-key.nvim',
   config = function ()
     local wk = require("which-key")
 
-    wk.setup({
+   wk.setup({
       plugins = {
         marks = true, -- shows a list of your marks on ' and `
         registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -70,6 +70,17 @@ return  { 'folke/which-key.nvim',
     })
 
     wk.register({
+
+    }, {
+        prefix = "g",
+        mode = "n",
+        buffer = nil,
+        silent = true,
+        noremap = true,
+        nowait = true,
+    })
+
+    wk.register({
       q = { "<cmd>q!<CR>", "close" },
       Q = { "<cmd>qa!<CR>", "close all" },
       w = { "<cmd>w!<CR>", "write"},
@@ -79,8 +90,10 @@ return  { 'folke/which-key.nvim',
 
       f = { "<cmd>Telescope find_files<CR>", "files" },
       g = {
+        name = 'git',
         g = { "<cmd>LazyGit<CR>", "lazygit" },
-        b = { "<cmd>GitBlameToggle<CR>", "blame" }
+        b = { "<cmd>GitBlameToggle<CR>", "blame" },
+        c = { "<cmd>Telescope git_commits<CR>", "commits" },
       },
 
       p = {
@@ -89,6 +102,12 @@ return  { 'folke/which-key.nvim',
         i = { "<cmd>PackerStatus<CR>", "info" },
       },
       l = {
+        name = 'lsp actions',
+        d = { "<cmd>Telescope diagnostic<CR>", "diagnostics"},
+        s = { "<cmd>Telescope lsp_document_symbols<CR>", "document symbols"},
+        S = { "<cmd>Telescope lsp_workspace_symbols<CR>", "workspace symbols"}
+      },
+      L = {
         name = 'lsp',
         i = { "<cmd>LspInfo<CR>", "lsp info"},
         m = { "<cmd>Mason<CR>", "mason"}
@@ -96,7 +115,7 @@ return  { 'folke/which-key.nvim',
 
       e = { "<cmd>NERDTreeToggle<CR>", "NERDTree" },
       t = { "<cmd>TagbarToggle<CR>", "Tagbar"},
-    }, { 
+    }, {
         prefix = "<leader>",
         mode = "n",
         buffer = nil,
