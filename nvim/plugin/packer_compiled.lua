@@ -84,15 +84,15 @@ _G.packer_plugins = {
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-nvim-lua"] = {
-    loaded = true,
-    path = "/home/saian/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -111,11 +111,6 @@ _G.packer_plugins = {
     path = "/home/saian/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/home/saian/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
-  },
   ["git-blame.nvim"] = {
     config = { "\27LJ\2\n>\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\31let g:gitblame_enabled = 0\bcmd\bvim\0" },
     loaded = true,
@@ -127,18 +122,6 @@ _G.packer_plugins = {
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
-  ["lsp-zero.nvim"] = {
-    config = { "\27LJ\2\nl\0\0\4\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\1\2\0'\3\3\0B\1\2\0019\1\4\0B\1\1\0019\1\5\0B\1\1\1K\0\1\0\nsetup\19nvim_workspace\16recommended\vpreset\rlsp-zero\frequire\0" },
-    loaded = true,
-    path = "/home/saian/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["lsp_signature.nvim"] = {
-    config = { "\27LJ\2\nÀ\4\0\0\6\0\r\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0024\3\0\0=\3\f\2B\0\2\1K\0\1\0\24extra_trigger_chars\17handler_opts\1\0\1\vborder\frounded\rlog_path\23/lsp_signature.log\ncache\fstdpath\afn\bvim\1\0\24\19always_trigger\1\14max_width\3P\17hi_parameter LspSignatureActiveParameter\16hint_scheme\vString\twrap\2\16hint_prefix\nüêº \16hint_enable\1\ffix_pos\1\18close_timeout\3†\31\26floating_window_off_y\3\0\26floating_window_off_x\3\1#floating_window_above_cur_line\2\20floating_window\2\nnoice\1\ndebug\1\15max_height\3\f\14doc_lines\3\n\fverbose\1\19timer_interval\3»\1\17shadow_guibg\nBlack\17shadow_blend\3$\tbind\2\fpadding\5\vzindex\3»\1\nsetup\18lsp_signature\frequire\0" },
-    loaded = true,
-    path = "/home/saian/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
-    url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
   ["lualine.nvim"] = {
     config = { "\27LJ\2\nì\6\0\0\6\0&\0;6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\15\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0004\5\0\0=\5\t\0044\5\0\0=\5\n\4=\4\v\0034\4\0\0=\4\f\0035\4\r\0=\4\14\3=\3\16\0025\3\18\0005\4\17\0=\4\19\0035\4\20\0=\4\21\0035\4\22\0=\4\23\0035\4\24\0=\4\25\0035\4\26\0=\4\27\0035\4\28\0=\4\29\3=\3\30\0025\3\31\0004\4\0\0=\4\19\0034\4\0\0=\4\21\0035\4 \0=\4\23\0035\4!\0=\4\25\0034\4\0\0=\4\27\0034\4\0\0=\4\29\3=\3\"\0024\3\0\0=\3#\0024\3\0\0=\3\n\0024\3\0\0=\3$\0024\3\0\0=\3%\2B\0\2\1K\0\1\0\15extensions\20inactive_winbar\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\frefresh\1\0\3\ftabline\3Ë\a\vwinbar\3Ë\a\15statusline\3Ë\a\17ignore_focus\23disabled_filetypes\vwinbar\15statusline\1\0\0\23section_separators\1\0\2\nright\bÓÇ≤\tleft\bÓÇ∞\25component_separators\1\0\2\nright\bÓÇ≥\tleft\bÓÇ±\1\0\4\ntheme\tauto\18icons_enabled\2\17globalstatus\1\25always_divide_middle\2\nsetup\flualine\frequire\0" },
     loaded = true,
@@ -146,11 +129,13 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
+    config = { "\27LJ\2\nY\0\1\5\1\5\0\n6\1\0\0'\3\1\0B\1\2\0028\1\0\0019\1\2\0015\3\3\0-\4\0\0=\4\4\3B\1\2\1K\0\1\0\1¿\17capabilities\1\0\0\nsetup\14lspconfig\frequire”\1\1\0\6\0\t\0\0206\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\3\0004\4\0\0=\4\4\3B\1\2\0016\1\0\0'\3\5\0B\1\2\0029\1\6\1B\1\1\0029\2\a\0004\4\3\0003\5\b\0>\5\1\4B\2\2\0012\0\0ÄK\0\1\0\0\19setup_handlers\25default_capabilities\17cmp_nvim_lsp\21ensure_installed\1\0\1\27automatic_installation\2\nsetup\20mason-lspconfig\frequire\0" },
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
+    config = { "\27LJ\2\n„\5\0\0\5\0\22\0\0266\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\3=\3\6\0026\3\a\0009\3\b\0039\3\t\0039\3\n\3=\3\v\0025\3\f\0=\3\r\0025\3\14\0=\3\15\0025\3\16\0005\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\2B\0\2\1K\0\1\0\aui\fkeymaps\1\0\t\19update_package\6u\20install_package\6i\26toggle_package_expand\t<CR>\26apply_language_filter\n<C-f>\24cancel_installation\n<C-c>\22uninstall_package\6X\28check_outdated_packages\6C\24update_all_packages\6U\26check_package_version\6c\nicons\1\0\3\24package_uninstalled\b‚óç\20package_pending\b‚óç\22package_installed\b‚óç\1\0\4\vheight\4Õô≥Ê\fÃô≥ˇ\3\nwidth\4ö≥ÊÃ\tô≥¶ˇ\3$check_outdated_packages_on_open\2\vborder\tnone\14providers\1\2\0\0!mason.providers.registry-api\vgithub\1\0\1\26download_url_template2https://github.com/%s/releases/download/%s/%s\14log_level\tINFO\vlevels\blog\bvim\bpip\17install_args\1\0\1\16upgrade_pip\1\1\0\2\30max_concurrent_installers\3\4\tPATH\fprepend\nsetup\nmason\frequire\0" },
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
@@ -167,6 +152,7 @@ _G.packer_plugins = {
     url = "https://github.com/preservim/nerdtree"
   },
   ["nvim-cmp"] = {
+    config = { "\27LJ\2\nC\0\1\4\0\4\0\a6\1\0\0'\3\1\0B\1\2\0029\1\2\0019\3\3\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequire⁄\1\0\1\3\1\a\0\29-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\4Ä-\1\0\0009\1\1\1B\1\1\1X\1\19Ä6\1\2\0009\1\3\1B\1\1\2\15\0\1\0X\2\4Ä6\1\2\0009\1\4\1B\1\1\1X\1\nÄ6\1\5\0B\1\1\2\15\0\1\0X\2\4Ä-\1\0\0009\1\6\1B\1\1\1X\1\2Ä\18\1\0\0B\1\1\1K\0\1\0\0¿\rcomplete\21has_words_before\19expand_or_jump\23expand_or_jumpable\fluasnip\21select_next_item\fvisibleî\1\0\1\4\1\5\0\23-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\4Ä-\1\0\0009\1\1\1B\1\1\1X\1\rÄ6\1\2\0009\1\3\1)\3ˇˇB\1\2\2\15\0\1\0X\2\5Ä6\1\2\0009\1\4\1)\3ˇˇB\1\2\1X\1\2Ä\18\1\0\0B\1\1\1K\0\1\0\0¿\tjump\rjumpable\fluasnip\21select_prev_item\fvisible⁄\4\1\0\v\0%\0N6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\6\0005\4\4\0003\5\3\0=\5\5\4=\4\a\0035\4\v\0009\5\b\0009\5\t\0059\5\n\5B\5\1\2=\5\f\0049\5\b\0009\5\t\0059\5\n\5B\5\1\2=\5\r\4=\4\t\0039\4\14\0009\4\15\0049\4\16\0045\6\19\0009\a\14\0009\a\17\a5\t\18\0B\a\2\2=\a\20\0069\a\14\0003\t\21\0005\n\22\0B\a\3\2=\a\23\0069\a\14\0003\t\24\0005\n\25\0B\a\3\2=\a\26\6B\4\2\2=\4\14\0039\4\b\0009\4\27\0044\6\5\0005\a\28\0>\a\1\0065\a\29\0>\a\2\0065\a\30\0>\a\3\0065\a\31\0>\a\4\6B\4\2\2=\4\27\3B\1\2\0019\1\2\0009\1 \1'\3!\0005\4\"\0009\5\14\0009\5\15\0059\5 \5B\5\1\2=\5\14\0049\5\b\0009\5\27\0054\a\3\0005\b#\0>\b\1\a4\b\3\0005\t$\0>\t\1\bB\5\3\2=\5\27\4B\1\3\0012\0\0ÄK\0\1\0\1\0\1\tname\fcmdline\1\0\1\tname\tpath\1\0\0\6:\fcmdline\1\0\1\tname\tpath\1\0\1\tname\fluasnip\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lsp\fsources\f<S-Tab>\1\3\0\0\6i\6s\0\n<Tab>\1\3\0\0\6i\6s\0\t<CR>\1\0\0\1\0\1\vselect\2\fconfirm\vinsert\vpreset\fmapping\18documentation\15completion\1\0\0\rbordered\vwindow\vconfig\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\frequire\0" },
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
@@ -189,6 +175,7 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
+    config = { "\27LJ\2\n&\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\2K\0\1\0\vpacker\frequire\0" },
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
@@ -214,7 +201,7 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-commentary"
   },
   ["which-key.nvim"] = {
-    config = { "\27LJ\2\n¢\14\0\0\6\0P\0]6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\b\0005\4\3\0005\5\4\0=\5\5\0045\5\6\0=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0005\5\16\0=\5\17\0045\5\18\0=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\23\0045\5\24\0=\5\25\4=\4\26\0035\4\27\0=\4\28\0035\4\30\0005\5\29\0=\5\31\0045\5 \0=\5!\4=\4\"\3B\1\2\0019\1#\0004\3\0\0005\4$\0B\1\3\0019\1#\0005\3&\0005\4%\0=\4'\0035\4(\0=\4)\0035\4*\0=\4+\0035\4,\0=\4-\0035\4.\0=\4/\0035\0040\0=\0041\0035\0042\0=\0043\0035\0044\0005\0055\0=\0056\0045\0057\0=\0058\0045\0059\0=\5/\4=\0046\0035\4:\0005\5;\0=\5<\0045\5=\0=\5\31\4=\4>\0035\4?\0005\5@\0=\5A\0045\5B\0=\5<\0045\5C\0=\5D\4=\4E\0035\4F\0005\5G\0=\5\31\0045\5H\0=\5I\4=\4J\0035\4K\0=\4L\0035\4M\0=\4N\0035\4O\0B\1\3\1K\0\1\0\1\0\5\vsilent\2\tmode\6n\vnowait\2\vprefix\r<leader>\fnoremap\2\6t\1\3\0\0\26<cmd>TagbarToggle<CR>\vTagbar\6e\1\3\0\0\28<cmd>NERDTreeToggle<CR>\rNERDTree\6L\6m\1\3\0\0\19<cmd>Mason<CR>\nmason\1\3\0\0\21<cmd>LspInfo<CR>\rlsp info\1\0\1\tname\blsp\6l\6S\1\3\0\0-<cmd>Telescope lsp_workspace_symbols<CR>\22workspace symbols\1\3\0\0,<cmd>Telescope lsp_document_symbols<CR>\21document symbols\6d\1\3\0\0\"<cmd>Telescope diagnostic<CR>\16diagnostics\1\0\1\tname\16lsp actions\6p\1\3\0\0\26<cmd>PackerStatus<CR>\tinfo\6s\1\3\0\0\24<cmd>PackerSync<CR>\tsync\1\0\1\tname\vpacker\1\3\0\0#<cmd>Telescope git_commits<CR>\fcommits\6b\1\3\0\0\28<cmd>GitBlameToggle<CR>\nblame\6g\1\3\0\0\21<cmd>LazyGit<CR>\flazygit\1\0\1\tname\bgit\6f\1\3\0\0\"<cmd>Telescope find_files<CR>\nfiles\6h\1\3\0\0\24<cmd>nohlsearch<CR>\17no highlight\6c\1\3\0\0\22<cmd>bdelete!<CR>\17close buffer\6W\1\3\0\0\17<cmd>wa!<CR>\14write all\6w\1\3\0\0\16<cmd>w!<CR>\nwrite\6Q\1\3\0\0\17<cmd>qa!<CR>\14close all\6q\1\0\0\1\3\0\0\16<cmd>q!<CR>\nclose\1\0\5\vsilent\2\tmode\6n\vnowait\2\vprefix\6g\fnoremap\2\rregister\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\tcall\blua\a^:\a^ \vlayout\nwidth\1\0\2\bmax\0032\bmin\3\20\vheight\1\0\2\fspacing\3\3\nalign\tleft\1\0\2\bmax\3\25\bmin\3\4\vwindow\fpadding\1\5\0\0\3\2\3\2\3\2\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\3\rposition\vbottom\rwinblend\3\0\vborder\vsingle\19popup_mappings\1\0\2\16scroll_down\n<c-d>\14scroll_up\n<c-u>\nicons\1\0\3\ngroup\6+\14separator\b‚ûú\15breadcrumb\a¬ª\15key_labels\fplugins\1\0\4\19ignore_missing\2\rtriggers\tauto\14show_keys\2\14show_help\2\fpresets\1\0\a\fwindows\2\17text_objects\2\fmotions\2\14operators\1\6g\2\6z\2\bnav\2\rspelling\1\0\2\fenabled\2\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\0" },
+    config = { "\27LJ\2\nª\15\0\0\6\0V\0c6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\b\0005\4\3\0005\5\4\0=\5\5\0045\5\6\0=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0005\5\16\0=\5\17\0045\5\18\0=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\23\0045\5\24\0=\5\25\4=\4\26\0035\4\27\0=\4\28\0035\4\30\0005\5\29\0=\5\31\0045\5 \0=\5!\4=\4\"\3B\1\2\0019\1#\0005\3%\0005\4$\0=\4&\0035\4'\0=\4(\0035\4)\0=\4*\0035\4+\0=\4,\0035\4-\0=\4.\0035\4/\0=\0040\0035\0041\0=\0042\0035\0043\0=\0044\0035\0045\0005\0056\0=\0057\0045\0058\0=\0059\0045\5:\0=\5.\4=\0047\0035\4;\0005\5<\0=\5=\0045\5>\0=\5\31\4=\4?\0035\4@\0005\5A\0=\5&\0045\5B\0=\5C\0045\5D\0=\5=\0045\5E\0=\5F\4=\4G\0035\4H\0005\5I\0=\5\31\0045\5J\0=\5K\4=\4L\0035\4M\0=\4N\0035\4O\0=\4P\0035\4Q\0005\5R\0=\0057\0045\5S\0=\5P\4=\4T\0035\4U\0B\1\3\1K\0\1\0\1\0\5\vsilent\2\vnowait\2\tmode\6n\vprefix\r<leader>\fnoremap\2\6T\1\3\0\0\"<cmd>Telescope treesitter<CR>\ttags\1\3\0\0!<cmd>Telescope live_grep<CR>\tgrep\1\0\1\tname\14Telescope\6t\1\3\0\0\26<cmd>TagbarToggle<CR>\vTagbar\6e\1\3\0\0\28<cmd>NERDTreeToggle<CR>\rNERDTree\6L\6m\1\3\0\0\19<cmd>Mason<CR>\nmason\1\3\0\0\21<cmd>LspInfo<CR>\rlsp info\1\0\1\tname\blsp\6l\6S\1\3\0\0-<cmd>Telescope lsp_workspace_symbols<CR>\22workspace symbols\1\3\0\0,<cmd>Telescope lsp_document_symbols<CR>\21document symbols\6d\1\3\0\0#<cmd>Telescope diagnostics<CR>\16diagnostics\1\3\0\0 <cmd>Telescope quickfix<CR>\rquickfix\1\0\1\tname\16lsp actions\6p\1\3\0\0\26<cmd>PackerStatus<CR>\tinfo\6s\1\3\0\0\24<cmd>PackerSync<CR>\tsync\1\0\1\tname\vpacker\1\3\0\0#<cmd>Telescope git_commits<CR>\fcommits\6b\1\3\0\0\28<cmd>GitBlameToggle<CR>\nblame\6g\1\3\0\0\21<cmd>LazyGit<CR>\flazygit\1\0\1\tname\bgit\6f\1\3\0\0\"<cmd>Telescope find_files<CR>\nfiles\6h\1\3\0\0\24<cmd>nohlsearch<CR>\17no highlight\6C\1\3\0\0\24<cmd>Commentary<CR>\fcomment\6c\1\3\0\0\22<cmd>bdelete!<CR>\17close buffer\6W\1\3\0\0\17<cmd>wa!<CR>\14write all\6w\1\3\0\0\16<cmd>w!<CR>\nwrite\6Q\1\3\0\0\17<cmd>qa!<CR>\14close all\6q\1\0\0\1\3\0\0\16<cmd>q!<CR>\nclose\rregister\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\tcall\blua\a^:\a^ \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\fspacing\3\3\nalign\tleft\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\2\3\2\3\2\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\3\rwinblend\3\0\vborder\vsingle\rposition\vbottom\19popup_mappings\1\0\2\14scroll_up\n<c-u>\16scroll_down\n<c-d>\nicons\1\0\3\15breadcrumb\a¬ª\ngroup\6+\14separator\b‚ûú\15key_labels\fplugins\1\0\4\rtriggers\tauto\14show_keys\2\14show_help\2\19ignore_missing\2\fpresets\1\0\a\6g\2\6z\2\bnav\2\fwindows\2\17text_objects\2\fmotions\2\14operators\1\rspelling\1\0\2\fenabled\2\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\0" },
     loaded = true,
     path = "/home/saian/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
@@ -222,34 +209,42 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: mason-lspconfig.nvim
+time([[Config for mason-lspconfig.nvim]], true)
+try_loadstring("\27LJ\2\nY\0\1\5\1\5\0\n6\1\0\0'\3\1\0B\1\2\0028\1\0\0019\1\2\0015\3\3\0-\4\0\0=\4\4\3B\1\2\1K\0\1\0\1¿\17capabilities\1\0\0\nsetup\14lspconfig\frequire”\1\1\0\6\0\t\0\0206\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\3\0004\4\0\0=\4\4\3B\1\2\0016\1\0\0'\3\5\0B\1\2\0029\1\6\1B\1\1\0029\2\a\0004\4\3\0003\5\b\0>\5\1\4B\2\2\0012\0\0ÄK\0\1\0\0\19setup_handlers\25default_capabilities\17cmp_nvim_lsp\21ensure_installed\1\0\1\27automatic_installation\2\nsetup\20mason-lspconfig\frequire\0", "config", "mason-lspconfig.nvim")
+time([[Config for mason-lspconfig.nvim]], false)
 -- Config for: moonfly
 time([[Config for moonfly]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme moonfly\bcmd\bvim\0", "config", "moonfly")
 time([[Config for moonfly]], false)
--- Config for: lsp_signature.nvim
-time([[Config for lsp_signature.nvim]], true)
-try_loadstring("\27LJ\2\nÀ\4\0\0\6\0\r\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0024\3\0\0=\3\f\2B\0\2\1K\0\1\0\24extra_trigger_chars\17handler_opts\1\0\1\vborder\frounded\rlog_path\23/lsp_signature.log\ncache\fstdpath\afn\bvim\1\0\24\19always_trigger\1\14max_width\3P\17hi_parameter LspSignatureActiveParameter\16hint_scheme\vString\twrap\2\16hint_prefix\nüêº \16hint_enable\1\ffix_pos\1\18close_timeout\3†\31\26floating_window_off_y\3\0\26floating_window_off_x\3\1#floating_window_above_cur_line\2\20floating_window\2\nnoice\1\ndebug\1\15max_height\3\f\14doc_lines\3\n\fverbose\1\19timer_interval\3»\1\17shadow_guibg\nBlack\17shadow_blend\3$\tbind\2\fpadding\5\vzindex\3»\1\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
-time([[Config for lsp_signature.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\nÙ\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\14highlight\1\0\2\venable\2&additional_vim_regex_highlighting\2\14autopairs\1\0\1\venable\2\vindent\1\0\1\venable\2\1\0\3\17auto_install\2\17sync_install\1\21ensure_installed\ball\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\nì\6\0\0\6\0&\0;6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\15\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0004\5\0\0=\5\t\0044\5\0\0=\5\n\4=\4\v\0034\4\0\0=\4\f\0035\4\r\0=\4\14\3=\3\16\0025\3\18\0005\4\17\0=\4\19\0035\4\20\0=\4\21\0035\4\22\0=\4\23\0035\4\24\0=\4\25\0035\4\26\0=\4\27\0035\4\28\0=\4\29\3=\3\30\0025\3\31\0004\4\0\0=\4\19\0034\4\0\0=\4\21\0035\4 \0=\4\23\0035\4!\0=\4\25\0034\4\0\0=\4\27\0034\4\0\0=\4\29\3=\3\"\0024\3\0\0=\3#\0024\3\0\0=\3\n\0024\3\0\0=\3$\0024\3\0\0=\3%\2B\0\2\1K\0\1\0\15extensions\20inactive_winbar\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\frefresh\1\0\3\ftabline\3Ë\a\vwinbar\3Ë\a\15statusline\3Ë\a\17ignore_focus\23disabled_filetypes\vwinbar\15statusline\1\0\0\23section_separators\1\0\2\nright\bÓÇ≤\tleft\bÓÇ∞\25component_separators\1\0\2\nright\bÓÇ≥\tleft\bÓÇ±\1\0\4\ntheme\tauto\18icons_enabled\2\17globalstatus\1\25always_divide_middle\2\nsetup\flualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
--- Config for: lsp-zero.nvim
-time([[Config for lsp-zero.nvim]], true)
-try_loadstring("\27LJ\2\nl\0\0\4\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\1\2\0'\3\3\0B\1\2\0019\1\4\0B\1\1\0019\1\5\0B\1\1\1K\0\1\0\nsetup\19nvim_workspace\16recommended\vpreset\rlsp-zero\frequire\0", "config", "lsp-zero.nvim")
-time([[Config for lsp-zero.nvim]], false)
+-- Config for: mason.nvim
+time([[Config for mason.nvim]], true)
+try_loadstring("\27LJ\2\n„\5\0\0\5\0\22\0\0266\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\3=\3\6\0026\3\a\0009\3\b\0039\3\t\0039\3\n\3=\3\v\0025\3\f\0=\3\r\0025\3\14\0=\3\15\0025\3\16\0005\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\2B\0\2\1K\0\1\0\aui\fkeymaps\1\0\t\19update_package\6u\20install_package\6i\26toggle_package_expand\t<CR>\26apply_language_filter\n<C-f>\24cancel_installation\n<C-c>\22uninstall_package\6X\28check_outdated_packages\6C\24update_all_packages\6U\26check_package_version\6c\nicons\1\0\3\24package_uninstalled\b‚óç\20package_pending\b‚óç\22package_installed\b‚óç\1\0\4\vheight\4Õô≥Ê\fÃô≥ˇ\3\nwidth\4ö≥ÊÃ\tô≥¶ˇ\3$check_outdated_packages_on_open\2\vborder\tnone\14providers\1\2\0\0!mason.providers.registry-api\vgithub\1\0\1\26download_url_template2https://github.com/%s/releases/download/%s/%s\14log_level\tINFO\vlevels\blog\bvim\bpip\17install_args\1\0\1\16upgrade_pip\1\1\0\2\30max_concurrent_installers\3\4\tPATH\fprepend\nsetup\nmason\frequire\0", "config", "mason.nvim")
+time([[Config for mason.nvim]], false)
 -- Config for: git-blame.nvim
 time([[Config for git-blame.nvim]], true)
 try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\31let g:gitblame_enabled = 0\bcmd\bvim\0", "config", "git-blame.nvim")
 time([[Config for git-blame.nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n¢\14\0\0\6\0P\0]6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\b\0005\4\3\0005\5\4\0=\5\5\0045\5\6\0=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0005\5\16\0=\5\17\0045\5\18\0=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\23\0045\5\24\0=\5\25\4=\4\26\0035\4\27\0=\4\28\0035\4\30\0005\5\29\0=\5\31\0045\5 \0=\5!\4=\4\"\3B\1\2\0019\1#\0004\3\0\0005\4$\0B\1\3\0019\1#\0005\3&\0005\4%\0=\4'\0035\4(\0=\4)\0035\4*\0=\4+\0035\4,\0=\4-\0035\4.\0=\4/\0035\0040\0=\0041\0035\0042\0=\0043\0035\0044\0005\0055\0=\0056\0045\0057\0=\0058\0045\0059\0=\5/\4=\0046\0035\4:\0005\5;\0=\5<\0045\5=\0=\5\31\4=\4>\0035\4?\0005\5@\0=\5A\0045\5B\0=\5<\0045\5C\0=\5D\4=\4E\0035\4F\0005\5G\0=\5\31\0045\5H\0=\5I\4=\4J\0035\4K\0=\4L\0035\4M\0=\4N\0035\4O\0B\1\3\1K\0\1\0\1\0\5\vsilent\2\tmode\6n\vnowait\2\vprefix\r<leader>\fnoremap\2\6t\1\3\0\0\26<cmd>TagbarToggle<CR>\vTagbar\6e\1\3\0\0\28<cmd>NERDTreeToggle<CR>\rNERDTree\6L\6m\1\3\0\0\19<cmd>Mason<CR>\nmason\1\3\0\0\21<cmd>LspInfo<CR>\rlsp info\1\0\1\tname\blsp\6l\6S\1\3\0\0-<cmd>Telescope lsp_workspace_symbols<CR>\22workspace symbols\1\3\0\0,<cmd>Telescope lsp_document_symbols<CR>\21document symbols\6d\1\3\0\0\"<cmd>Telescope diagnostic<CR>\16diagnostics\1\0\1\tname\16lsp actions\6p\1\3\0\0\26<cmd>PackerStatus<CR>\tinfo\6s\1\3\0\0\24<cmd>PackerSync<CR>\tsync\1\0\1\tname\vpacker\1\3\0\0#<cmd>Telescope git_commits<CR>\fcommits\6b\1\3\0\0\28<cmd>GitBlameToggle<CR>\nblame\6g\1\3\0\0\21<cmd>LazyGit<CR>\flazygit\1\0\1\tname\bgit\6f\1\3\0\0\"<cmd>Telescope find_files<CR>\nfiles\6h\1\3\0\0\24<cmd>nohlsearch<CR>\17no highlight\6c\1\3\0\0\22<cmd>bdelete!<CR>\17close buffer\6W\1\3\0\0\17<cmd>wa!<CR>\14write all\6w\1\3\0\0\16<cmd>w!<CR>\nwrite\6Q\1\3\0\0\17<cmd>qa!<CR>\14close all\6q\1\0\0\1\3\0\0\16<cmd>q!<CR>\nclose\1\0\5\vsilent\2\tmode\6n\vnowait\2\vprefix\6g\fnoremap\2\rregister\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\tcall\blua\a^:\a^ \vlayout\nwidth\1\0\2\bmax\0032\bmin\3\20\vheight\1\0\2\fspacing\3\3\nalign\tleft\1\0\2\bmax\3\25\bmin\3\4\vwindow\fpadding\1\5\0\0\3\2\3\2\3\2\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\3\rposition\vbottom\rwinblend\3\0\vborder\vsingle\19popup_mappings\1\0\2\16scroll_down\n<c-d>\14scroll_up\n<c-u>\nicons\1\0\3\ngroup\6+\14separator\b‚ûú\15breadcrumb\a¬ª\15key_labels\fplugins\1\0\4\19ignore_missing\2\rtriggers\tauto\14show_keys\2\14show_help\2\fpresets\1\0\a\fwindows\2\17text_objects\2\fmotions\2\14operators\1\6g\2\6z\2\bnav\2\rspelling\1\0\2\fenabled\2\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+try_loadstring("\27LJ\2\nª\15\0\0\6\0V\0c6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\b\0005\4\3\0005\5\4\0=\5\5\0045\5\6\0=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0005\5\16\0=\5\17\0045\5\18\0=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\23\0045\5\24\0=\5\25\4=\4\26\0035\4\27\0=\4\28\0035\4\30\0005\5\29\0=\5\31\0045\5 \0=\5!\4=\4\"\3B\1\2\0019\1#\0005\3%\0005\4$\0=\4&\0035\4'\0=\4(\0035\4)\0=\4*\0035\4+\0=\4,\0035\4-\0=\4.\0035\4/\0=\0040\0035\0041\0=\0042\0035\0043\0=\0044\0035\0045\0005\0056\0=\0057\0045\0058\0=\0059\0045\5:\0=\5.\4=\0047\0035\4;\0005\5<\0=\5=\0045\5>\0=\5\31\4=\4?\0035\4@\0005\5A\0=\5&\0045\5B\0=\5C\0045\5D\0=\5=\0045\5E\0=\5F\4=\4G\0035\4H\0005\5I\0=\5\31\0045\5J\0=\5K\4=\4L\0035\4M\0=\4N\0035\4O\0=\4P\0035\4Q\0005\5R\0=\0057\0045\5S\0=\5P\4=\4T\0035\4U\0B\1\3\1K\0\1\0\1\0\5\vsilent\2\vnowait\2\tmode\6n\vprefix\r<leader>\fnoremap\2\6T\1\3\0\0\"<cmd>Telescope treesitter<CR>\ttags\1\3\0\0!<cmd>Telescope live_grep<CR>\tgrep\1\0\1\tname\14Telescope\6t\1\3\0\0\26<cmd>TagbarToggle<CR>\vTagbar\6e\1\3\0\0\28<cmd>NERDTreeToggle<CR>\rNERDTree\6L\6m\1\3\0\0\19<cmd>Mason<CR>\nmason\1\3\0\0\21<cmd>LspInfo<CR>\rlsp info\1\0\1\tname\blsp\6l\6S\1\3\0\0-<cmd>Telescope lsp_workspace_symbols<CR>\22workspace symbols\1\3\0\0,<cmd>Telescope lsp_document_symbols<CR>\21document symbols\6d\1\3\0\0#<cmd>Telescope diagnostics<CR>\16diagnostics\1\3\0\0 <cmd>Telescope quickfix<CR>\rquickfix\1\0\1\tname\16lsp actions\6p\1\3\0\0\26<cmd>PackerStatus<CR>\tinfo\6s\1\3\0\0\24<cmd>PackerSync<CR>\tsync\1\0\1\tname\vpacker\1\3\0\0#<cmd>Telescope git_commits<CR>\fcommits\6b\1\3\0\0\28<cmd>GitBlameToggle<CR>\nblame\6g\1\3\0\0\21<cmd>LazyGit<CR>\flazygit\1\0\1\tname\bgit\6f\1\3\0\0\"<cmd>Telescope find_files<CR>\nfiles\6h\1\3\0\0\24<cmd>nohlsearch<CR>\17no highlight\6C\1\3\0\0\24<cmd>Commentary<CR>\fcomment\6c\1\3\0\0\22<cmd>bdelete!<CR>\17close buffer\6W\1\3\0\0\17<cmd>wa!<CR>\14write all\6w\1\3\0\0\16<cmd>w!<CR>\nwrite\6Q\1\3\0\0\17<cmd>qa!<CR>\14close all\6q\1\0\0\1\3\0\0\16<cmd>q!<CR>\nclose\rregister\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\tcall\blua\a^:\a^ \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\fspacing\3\3\nalign\tleft\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\2\3\2\3\2\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\3\rwinblend\3\0\vborder\vsingle\rposition\vbottom\19popup_mappings\1\0\2\14scroll_up\n<c-u>\16scroll_down\n<c-d>\nicons\1\0\3\15breadcrumb\a¬ª\ngroup\6+\14separator\b‚ûú\15key_labels\fplugins\1\0\4\rtriggers\tauto\14show_keys\2\14show_help\2\19ignore_missing\2\fpresets\1\0\a\6g\2\6z\2\bnav\2\fwindows\2\17text_objects\2\fmotions\2\14operators\1\rspelling\1\0\2\fenabled\2\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\nì\6\0\0\6\0&\0;6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\15\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0004\5\0\0=\5\t\0044\5\0\0=\5\n\4=\4\v\0034\4\0\0=\4\f\0035\4\r\0=\4\14\3=\3\16\0025\3\18\0005\4\17\0=\4\19\0035\4\20\0=\4\21\0035\4\22\0=\4\23\0035\4\24\0=\4\25\0035\4\26\0=\4\27\0035\4\28\0=\4\29\3=\3\30\0025\3\31\0004\4\0\0=\4\19\0034\4\0\0=\4\21\0035\4 \0=\4\23\0035\4!\0=\4\25\0034\4\0\0=\4\27\0034\4\0\0=\4\29\3=\3\"\0024\3\0\0=\3#\0024\3\0\0=\3\n\0024\3\0\0=\3$\0024\3\0\0=\3%\2B\0\2\1K\0\1\0\15extensions\20inactive_winbar\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\frefresh\1\0\3\ftabline\3Ë\a\vwinbar\3Ë\a\15statusline\3Ë\a\17ignore_focus\23disabled_filetypes\vwinbar\15statusline\1\0\0\23section_separators\1\0\2\nright\bÓÇ≤\tleft\bÓÇ∞\25component_separators\1\0\2\nright\bÓÇ≥\tleft\bÓÇ±\1\0\4\ntheme\tauto\18icons_enabled\2\17globalstatus\1\25always_divide_middle\2\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\nC\0\1\4\0\4\0\a6\1\0\0'\3\1\0B\1\2\0029\1\2\0019\3\3\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequire⁄\1\0\1\3\1\a\0\29-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\4Ä-\1\0\0009\1\1\1B\1\1\1X\1\19Ä6\1\2\0009\1\3\1B\1\1\2\15\0\1\0X\2\4Ä6\1\2\0009\1\4\1B\1\1\1X\1\nÄ6\1\5\0B\1\1\2\15\0\1\0X\2\4Ä-\1\0\0009\1\6\1B\1\1\1X\1\2Ä\18\1\0\0B\1\1\1K\0\1\0\0¿\rcomplete\21has_words_before\19expand_or_jump\23expand_or_jumpable\fluasnip\21select_next_item\fvisibleî\1\0\1\4\1\5\0\23-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\4Ä-\1\0\0009\1\1\1B\1\1\1X\1\rÄ6\1\2\0009\1\3\1)\3ˇˇB\1\2\2\15\0\1\0X\2\5Ä6\1\2\0009\1\4\1)\3ˇˇB\1\2\1X\1\2Ä\18\1\0\0B\1\1\1K\0\1\0\0¿\tjump\rjumpable\fluasnip\21select_prev_item\fvisible⁄\4\1\0\v\0%\0N6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\6\0005\4\4\0003\5\3\0=\5\5\4=\4\a\0035\4\v\0009\5\b\0009\5\t\0059\5\n\5B\5\1\2=\5\f\0049\5\b\0009\5\t\0059\5\n\5B\5\1\2=\5\r\4=\4\t\0039\4\14\0009\4\15\0049\4\16\0045\6\19\0009\a\14\0009\a\17\a5\t\18\0B\a\2\2=\a\20\0069\a\14\0003\t\21\0005\n\22\0B\a\3\2=\a\23\0069\a\14\0003\t\24\0005\n\25\0B\a\3\2=\a\26\6B\4\2\2=\4\14\0039\4\b\0009\4\27\0044\6\5\0005\a\28\0>\a\1\0065\a\29\0>\a\2\0065\a\30\0>\a\3\0065\a\31\0>\a\4\6B\4\2\2=\4\27\3B\1\2\0019\1\2\0009\1 \1'\3!\0005\4\"\0009\5\14\0009\5\15\0059\5 \5B\5\1\2=\5\14\0049\5\b\0009\5\27\0054\a\3\0005\b#\0>\b\1\a4\b\3\0005\t$\0>\t\1\bB\5\3\2=\5\27\4B\1\3\0012\0\0ÄK\0\1\0\1\0\1\tname\fcmdline\1\0\1\tname\tpath\1\0\0\6:\fcmdline\1\0\1\tname\tpath\1\0\1\tname\fluasnip\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lsp\fsources\f<S-Tab>\1\3\0\0\6i\6s\0\n<Tab>\1\3\0\0\6i\6s\0\t<CR>\1\0\0\1\0\1\vselect\2\fconfirm\vinsert\vpreset\fmapping\18documentation\15completion\1\0\0\rbordered\vwindow\vconfig\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: packer.nvim
+time([[Config for packer.nvim]], true)
+try_loadstring("\27LJ\2\n&\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\2K\0\1\0\vpacker\frequire\0", "config", "packer.nvim")
+time([[Config for packer.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

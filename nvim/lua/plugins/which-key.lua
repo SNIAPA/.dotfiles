@@ -70,22 +70,12 @@ return  { 'folke/which-key.nvim',
     })
 
     wk.register({
-
-    }, {
-        prefix = "g",
-        mode = "n",
-        buffer = nil,
-        silent = true,
-        noremap = true,
-        nowait = true,
-    })
-
-    wk.register({
       q = { "<cmd>q!<CR>", "close" },
       Q = { "<cmd>qa!<CR>", "close all" },
       w = { "<cmd>w!<CR>", "write"},
       W = { "<cmd>wa!<CR>", "write all" },
       c = { "<cmd>bdelete!<CR>", "close buffer" },
+      C = { "<cmd>Commentary<CR>", "comment" },
       h = { "<cmd>nohlsearch<CR>", "no highlight" },
 
       f = { "<cmd>Telescope find_files<CR>", "files" },
@@ -103,7 +93,8 @@ return  { 'folke/which-key.nvim',
       },
       l = {
         name = 'lsp actions',
-        d = { "<cmd>Telescope diagnostic<CR>", "diagnostics"},
+        q = { "<cmd>Telescope quickfix<CR>", "quickfix"},
+        d = { "<cmd>Telescope diagnostics<CR>", "diagnostics"},
         s = { "<cmd>Telescope lsp_document_symbols<CR>", "document symbols"},
         S = { "<cmd>Telescope lsp_workspace_symbols<CR>", "workspace symbols"}
       },
@@ -115,6 +106,11 @@ return  { 'folke/which-key.nvim',
 
       e = { "<cmd>NERDTreeToggle<CR>", "NERDTree" },
       t = { "<cmd>TagbarToggle<CR>", "Tagbar"},
+      T = {
+        name = "Telescope",
+        g = {"<cmd>Telescope live_grep<CR>", "grep"},
+        t = {"<cmd>Telescope treesitter<CR>", "tags"},
+      }
     }, {
         prefix = "<leader>",
         mode = "n",
