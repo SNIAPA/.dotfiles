@@ -93,9 +93,10 @@ return  { 'folke/which-key.nvim',
       l = {
         name = 'lsp actions',
         i = { "<cmd>lua vim.lsp.buf.hover()<CR>", "info"},
+        r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "rename"},
         l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "line diagnostic"},
         a = { "<cmd>CodeActionMenu<CR>", "action"},
-        d = { "<cmd>Telescope diagnostics<CR>", "diagnostics"},
+        d = { "<cmd>TroubleToggle<CR>", "diagnostics"},
         s = { "<cmd>Telescope lsp_document_symbols<CR>", "document symbols"},
         S = { "<cmd>Telescope lsp_workspace_symbols<CR>", "workspace symbols"}
       },
