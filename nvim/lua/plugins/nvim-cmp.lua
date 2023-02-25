@@ -6,6 +6,7 @@ return { 'hrsh7th/nvim-cmp',
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
   },
   config = function()
 
@@ -23,38 +24,22 @@ return { 'hrsh7th/nvim-cmp',
       },
       mapping = cmp.mapping.preset.insert({
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        ["<Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable() 
-          -- they way you will only jump inside the snippet region
-          elseif luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
-          elseif has_words_before() then
-            cmp.complete()
-          else
-            fallback()
-          end
+        ["<Tab>"] = cmp.mapping(function()
+          cmp.select_next_item()
         end, { "i", "s" }),
 
-        ["<S-Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          elseif luasnip.jumpable(-1) then
-            luasnip.jump(-1)
-          else
-            fallback()
-          end
+        ["<S-Tab>"] = cmp.mapping(function()
+          cmp.select_prev_item()
         end, { "i", "s" }),
       }),
       sources = cmp.config.sources({
-        { name = 'nvim_lsp' }, 
+        { name = 'nvim_lsp_signature_help' },
+        { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = 'luasnip' },
         { name = 'path' },
       })
     }
-    
 
     cmp.setup.cmdline(':', {
       mapping = cmp.mapping.preset.cmdline(),
@@ -65,6 +50,5 @@ return { 'hrsh7th/nvim-cmp',
       })
     })
 
-    
   end
 }

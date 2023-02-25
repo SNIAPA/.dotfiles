@@ -2,7 +2,7 @@ return  { 'folke/which-key.nvim',
   config = function ()
     local wk = require("which-key")
 
-   wk.setup({
+    wk.setup({
       plugins = {
         marks = true, -- shows a list of your marks on ' and `
         registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -85,15 +85,16 @@ return  { 'folke/which-key.nvim',
         b = { "<cmd>GitBlameToggle<CR>", "blame" },
         c = { "<cmd>Telescope git_commits<CR>", "commits" },
       },
-
       p = {
         name = 'packer',
-        s = { "<cmd>PackerSync<CR>", "sync" },
+        s = { "<cmd>:source $MYVIMRC | PackerSync<CR>", "sync" },
         i = { "<cmd>PackerStatus<CR>", "info" },
       },
       l = {
         name = 'lsp actions',
-        q = { "<cmd>Telescope quickfix<CR>", "quickfix"},
+        i = { "<cmd>lua vim.lsp.buf.hover()<CR>", "info"},
+        l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "line diagnostic"},
+        a = { "<cmd>CodeActionMenu<CR>", "action"},
         d = { "<cmd>Telescope diagnostics<CR>", "diagnostics"},
         s = { "<cmd>Telescope lsp_document_symbols<CR>", "document symbols"},
         S = { "<cmd>Telescope lsp_workspace_symbols<CR>", "workspace symbols"}
