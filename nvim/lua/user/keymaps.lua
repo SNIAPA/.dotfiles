@@ -43,7 +43,6 @@ keymap("n", "x", "\"_x", opts)
 -- Insert 
 -- Press jk quickly to to exit insert mode
 keymap("i", "jk", "<ESC>",opts)
-keymap("i", "<ESC>", "<Nop>",opts)
 
 -- Visual
 -- Stau in vusual mode after changing indent
