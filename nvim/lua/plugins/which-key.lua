@@ -93,6 +93,7 @@ return  { 'folke/which-key.nvim',
       l = {
         name = 'lsp actions',
         i = { "<cmd>lua vim.lsp.buf.hover()<CR>", "info"},
+        f = { "<cmd>lua vim.lsp.buf.format()<CR>", "format"},
         r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "rename"},
         l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "line diagnostic"},
         a = { "<cmd>CodeActionMenu<CR>", "action"},
