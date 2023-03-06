@@ -1,16 +1,14 @@
 #!/bin/bash
 pushd "$(dirname "$0")"
 
-configs=("i3" "picom" "polybar" "conky" "wallpapers" "rofi" "nvim" "alacritty")
+configs=("zsh" "i3" "picom" "conky" "wallpapers" "rofi" "nvim" "alacritty" "tmux")
 
 for config in "${configs[@]}"; do 
 
-  if [ -e $(realpath ~/".config/${config}") ]
-  then
-    echo "${config} config already exists relinking" 
-		rm -rdf $(realpath ~/".config/${config}")
-  fi
-  ln -s $(realpath ./"${config}") $(realpath ~/".config/${config}")
+  echo "linking ${config}"
+  unlink "$(realpath ~/'.config')/${config}"
+  ln -s $(realpath ./"${config}") $(realpath ~/".config/") 
 
 done
 
+echo "DONE"
