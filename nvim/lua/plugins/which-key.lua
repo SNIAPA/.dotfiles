@@ -77,6 +77,7 @@ return  { 'folke/which-key.nvim',
       c = { "<cmd>bdelete!<CR>", "close buffer" },
       C = { "<cmd>Commentary<CR>", "comment" },
       h = { "<cmd>nohlsearch<CR>", "no highlight" },
+      z = { "<cmd>ZenMode<CR>", "zen mode" },
 
       f = { "<cmd>Telescope find_files<CR>", "files" },
       g = {
