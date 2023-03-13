@@ -11,7 +11,7 @@ for config in "${configs[@]}"; do
 
 done
 echo "linking tmux"
-unlink "$(realpath ~/'.tmux.conf')"
-ln -s $(realpath ./".tmux.conf") $(realpath ~/".tmux.conf") 
+rm -rf $(realpath ~/)"/.tmux.conf"
+ln -s $(realpath ./"tmux/.tmux.conf") $(realpath ~/)"/.tmux.conf"
 
 echo "DONE"

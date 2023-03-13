@@ -1,5 +1,3 @@
-ZSH_THEME="gruvbox"
-
 #plugins
 plugins=(
     git 
@@ -32,6 +30,8 @@ plugins=(
 alias nv="nvim"
 alias sudo="sudo "
 alias ls='ls --color=auto'
+alias la='ls -la --color=auto'
+alias ta='tmux attach'
 
 # prompt
 parse_git_branch() {
@@ -48,8 +48,6 @@ autoload -U colors && colors
 export PROMPT=' %F{8}[%F{4}%n%F{9}@%F{6}%M%F{8}]%f $(parse_git_branch)%F{3}%1~%f $ '
 
 
-#histfile
-
 #fix for corruption
 
 FILTERED=$(strings -eS ~/.histfile)
@@ -59,7 +57,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt INC_APPEND_HISTORY
 
-neofetch
-
 #path
 PATH="$HOME/.local/bin:$PATH"
+
+neofetch
