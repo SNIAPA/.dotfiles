@@ -57,3 +57,7 @@ keymap("v", "<A-k>", ":m .-2", opts)
 -- Move text
 keymap("x", "<A-j>", ":m .+1", opts)
 keymap("x", "<A-k>", ":m .-2", opts)
+
+-- Terminal
+-- Exit
+keymap("t", "jk", [[<C-\><C-n>]], opts)

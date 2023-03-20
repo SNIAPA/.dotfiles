@@ -109,7 +109,7 @@ return  { 'folke/which-key.nvim',
       },
 
       e = { "<cmd>NERDTreeToggle<CR>", "NERDTree" },
-      t = { "<cmd>TagbarToggle<CR>", "Tagbar"},
+      t = { "<cmd>ToggleTerm<CR>", "ToggleTerm"},
       T = {
         name = "Telescope",
         g = {"<cmd>Telescope live_grep<CR>", "grep"},
