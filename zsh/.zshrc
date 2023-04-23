@@ -61,3 +61,4 @@ setopt INC_APPEND_HISTORY
 PATH="$HOME/.local/bin:$PATH"
 
 neofetch
+source $HOME/.bashrc

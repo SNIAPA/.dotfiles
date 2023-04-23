@@ -1,10 +1,10 @@
 return { 'akinsho/toggleterm.nvim',
   config = function()
     require("toggleterm").setup({
-      directon = 'float',
+      direction = 'float',
       autochdir = true,
       float_opts = {
-        border = "shadow"
+        border = "double"
       }
 
     })
