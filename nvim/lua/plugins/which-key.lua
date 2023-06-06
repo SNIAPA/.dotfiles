@@ -83,7 +83,7 @@ return  { 'folke/which-key.nvim',
       g = {
         name = 'git',
         g = { "<cmd>LazyGit<CR>", "lazygit" },
-        b = { "<cmd>GitBlameToggle<CR>", "blame" },
+        b = { "<cmd>GitBlameToggledirection<CR>", "blame" },
         c = { "<cmd>Telescope git_commits<CR>", "commits" },
       },
       p = {
@@ -98,7 +98,6 @@ return  { 'folke/which-key.nvim',
         r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "rename"},
         l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "line diagnostic"},
         a = { "<cmd>CodeActionMenu<CR>", "action"},
-        d = { "<cmd>TroubleToggle<CR>", "diagnostics"},
         s = { "<cmd>Telescope lsp_document_symbols<CR>", "document symbols"},
         S = { "<cmd>Telescope lsp_workspace_symbols<CR>", "workspace symbols"}
       },
@@ -109,7 +108,7 @@ return  { 'folke/which-key.nvim',
       },
 
       e = { "<cmd>NERDTreeToggle<CR>", "NERDTree" },
-      t = { "<cmd>ToggleTerm<CR>", "ToggleTerm"},
+      t = { "<cmd>ToggleTerm direction=float<CR>", "ToggleTerm"},
       T = {
         name = "Telescope",
         g = {"<cmd>Telescope live_grep<CR>", "grep"},
