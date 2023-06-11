@@ -40,7 +40,7 @@ keymap("n", "<A-k>", ":m .-2", opts)
 keymap("n", "x", "\"_x", opts)
 
 -- Mape pasting not copy
-keymap("n", "p", "\"_p", opts)
+keymap("n", "p", "\"_dp", opts)
 
 -- Insert 
 -- Press jk quickly to to exit insert mode
