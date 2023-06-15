@@ -83,7 +83,7 @@ return  { 'folke/which-key.nvim',
       g = {
         name = 'git',
         g = { "<cmd>LazyGit<CR>", "lazygit" },
-        b = { "<cmd>GitBlameToggledirection<CR>", "blame" },
+        b = { "<cmd>GitBlameToggle<CR>", "blame" },
         c = { "<cmd>Telescope git_commits<CR>", "commits" },
       },
       p = {
