@@ -1,5 +1,5 @@
 # Font for window tles
-font pango:Hack mono normal 8 
+font pango:Hack mono normal 12px
 
 # Imports
 include binds.conf
