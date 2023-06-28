@@ -39,9 +39,6 @@ keymap("n", "<A-k>", ":m .-2", opts)
 -- Make x not copy
 keymap("n", "x", "\"_x", opts)
 
--- Mape pasting not copy
-keymap("n", "p", "\"0p", opts)
-
 -- Insert 
 -- Press jk quickly to to exit insert mode
 keymap("i", "jk", "<ESC>",opts)
