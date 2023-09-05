@@ -33,8 +33,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text
-keymap("n", "<A-j>", ":m .+1", opts)
-keymap("n", "<A-k>", ":m .-2", opts)
+keymap("n", "<A-j>", ":m .+1<CR>", opts)
+keymap("n", "<A-k>", ":m .-2<CR>", opts)
 
 -- Make x not copy
 keymap("n", "x", "\"_x", opts)
@@ -49,8 +49,8 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text
-keymap("v", "<A-j>", ":m .+1", opts)
-keymap("v", "<A-k>", ":m .-2", opts)
+keymap("v", "<A-j>", ":m .+1<CR>", opts)
+keymap("v", "<A-k>", ":m .-2<CR>", opts)
 
 -- Visual Block
 -- Move text
