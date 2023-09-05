@@ -70,10 +70,6 @@ return  { 'folke/which-key.nvim',
     })
 
     wk.register({
-      q = { "<cmd>q!<CR>", "close" },
-      Q = { "<cmd>qa!<CR>", "close all" },
-      w = { "<cmd>w!<CR>", "write"},
-      W = { "<cmd>wa!<CR>", "write all" },
       c = { "<cmd>bn|:bd#<CR>", "close buffer" },
       C = { "<cmd>Commentary<CR>", "comment" },
       h = { "<cmd>nohlsearch<CR>", "no highlight" },
