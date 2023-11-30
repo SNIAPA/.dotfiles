@@ -70,28 +70,21 @@ return  { 'folke/which-key.nvim',
     })
 
     wk.register({
+      Q = { "<cmd>wqall!<CR>", "close buffer" },
       c = { "<cmd>bn|:bd#<CR>", "close buffer" },
       C = { "<cmd>Commentary<CR>", "comment" },
       h = { "<cmd>nohlsearch<CR>", "no highlight" },
       z = { "<cmd>ZenMode<CR>", "zen mode" },
 
       f = { "<cmd>Telescope find_files<CR>", "files" },
-      g = {
-        name = 'git',
-        g = { "<cmd>LazyGit<CR>", "lazygit" },
-        b = { "<cmd>GitBlameToggle<CR>", "blame" },
-        c = { "<cmd>Telescope git_commits<CR>", "commits" },
-      },
       p = {
-        name = 'packer',
-        s = { "<cmd>:source $MYVIMRC | PackerSync<CR>", "sync" },
-        i = { "<cmd>PackerStatus<CR>", "info" },
+        {"<cmd>Lazy<CR>",'plugsin',}
       },
       l = {
         name = 'lsp actions',
         i = { "<cmd>lua vim.lsp.buf.hover()<CR>", "info"},
         f = { "<cmd>lua vim.lsp.buf.format()<CR>", "format"},
-        r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "rename"},
+        r = { "<cmd>lua vim.lsp.buf.renamd()<CR>", "rename"},
         l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "line diagnostic"},
         a = { "<cmd>CodeActionMenu<CR>", "action"},
         s = { "<cmd>Telescope lsp_document_symbols<CR>", "document symbols"},
@@ -103,7 +96,7 @@ return  { 'folke/which-key.nvim',
         m = { "<cmd>Mason<CR>", "mason"}
       },
 
-      e = { "<cmd>NERDTreeToggle<CR>", "NERDTree" },
+      e = { "<cmd>NvimTreeToggle<CR>", "File Explorer" },
       t = { "<cmd>ToggleTerm direction=float<CR>", "ToggleTerm"},
       T = {
         name = "Telescope",
