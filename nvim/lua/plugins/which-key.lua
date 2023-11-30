@@ -97,8 +97,7 @@ return  { 'folke/which-key.nvim',
       },
 
       e = { "<cmd>NvimTreeToggle<CR>", "File Explorer" },
-      t = { "<cmd>ToggleTerm direction=float<CR>", "ToggleTerm"},
-      T = {
+      t = {
         name = "Telescope",
         g = {"<cmd>Telescope live_grep<CR>", "grep"},
         t = {"<cmd>Telescope treesitter<CR>", "tags"},
