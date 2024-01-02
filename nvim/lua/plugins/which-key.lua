@@ -72,7 +72,7 @@ return  { 'folke/which-key.nvim',
     wk.register({
       Q = { "<cmd>wqall!<CR>", "close buffer" },
       c = { "<cmd>bn|:bd#<CR>", "close buffer" },
-      C = { "<cmd>Commentary<CR>", "comment" },
+      C = { "<cmd>bd<CR>", "close buffer and window" },
       h = { "<cmd>nohlsearch<CR>", "no highlight" },
       z = { "<cmd>ZenMode<CR>", "zen mode" },
 
