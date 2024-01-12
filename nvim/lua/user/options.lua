@@ -32,7 +32,7 @@ local options = {
   scrolloff = 10,
   sidescrolloff = 10,
   guifont = "Hack Nerd Font:size=8",
-  cc = "100",
+  cc = "80",
 	termguicolors = true,
   shell = '/usr/bin/zsh'
 }
