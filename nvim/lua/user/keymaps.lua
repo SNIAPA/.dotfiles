@@ -21,6 +21,8 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+--temoprary disabling splitting cause i do it to much and need to use single window more
+keymap("n", "<C-w>v", "", opts)
 
 -- Resize window
 keymap("n", "<C-A-h>", ":vertical resize -2<CR>", opts)
