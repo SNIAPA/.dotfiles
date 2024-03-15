@@ -21,12 +21,12 @@ return { 'nvim-lualine/lualine.nvim',
         }
       },
       sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_a = {'buffers'},
+        lualine_b = {},
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = {}
+        lualine_z = {'branch', 'diff', 'diagnostics'}
       },
       inactive_sections = {
         lualine_a = {},
