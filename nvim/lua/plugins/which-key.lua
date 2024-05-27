@@ -74,7 +74,6 @@ return  { 'folke/which-key.nvim',
       c = { "<cmd>bn|:bd#<CR>", "close buffer" },
       C = { "<cmd>bd<CR>", "close buffer and window" },
       h = { "<cmd>nohlsearch<CR>", "no highlight" },
-      z = { "<cmd>ZenMode<CR>", "zen mode" },
 
       f = { "<cmd>Telescope find_files<CR>", "files" },
       p = {
@@ -88,7 +87,9 @@ return  { 'folke/which-key.nvim',
         l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "line diagnostic"},
         a = { "<cmd>CodeActionMenu<CR>", "action"},
         s = { "<cmd>Telescope lsp_document_symbols<CR>", "document symbols"},
-        S = { "<cmd>Telescope lsp_workspace_symbols<CR>", "workspace symbols"}
+        S = { "<cmd>Telescope lsp_workspace_symbols<CR>", "workspace symbols"},
+        d = { "<cmd>Trouble<CR>", "workspace diagnostics"},
+        t = { "<cmd>Tagbar<CR>", "tagbar"}
       },
       L = {
         name = 'lsp',
