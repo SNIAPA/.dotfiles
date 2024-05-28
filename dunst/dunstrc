@@ -1,0 +1,6 @@
+width = 300
+height = 100
+offset = (10, 10)
+origin = top-right
+transparency = 80
+font = hack
