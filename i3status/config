@@ -1,0 +1,34 @@
+general {
+        colors = true
+        interval = 1
+        separator = "  "
+}
+
+order += "ethernet ham0"
+order += "memory"
+order += "load"
+order += "time local"
+
+ethernet ham0 {
+        format_up = "󰈁 %ip (%speed)"
+        color_good = "#FFFFFF"
+        format_down = "󰈂"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+        hide_if_equals_localtime = true
+}
+
+load {
+        format = "󰍛 %5min"
+}
+memory {
+        format = " %used"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
+}
+
+read_file uptime {
+        path = "/proc/uptime"
+}
