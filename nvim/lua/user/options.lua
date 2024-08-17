@@ -1,6 +1,6 @@
 local options = {
   backup = false,
-  clipboard = "unnamedplus", 
+  clipboard = "unnamedplus",
   cmdheight = 0,
   completeopt = { "menu", "preview", "noselect"},
   conceallevel = 0,
@@ -20,9 +20,6 @@ local options = {
   timeoutlen = 300,
   undofile = true,
   updatetime = 300,
-  expandtab = true,
-  shiftwidth = 2,
-  tabstop = 2,
   cursorline = true,
   number = true,
   relativenumber = true,
@@ -34,7 +31,12 @@ local options = {
   guifont = "Hack Nerd Font:size=8",
   cc = "80",
 	termguicolors = true,
-  shell = '/usr/bin/zsh'
+  shell = '/usr/bin/zsh',
+  -- indetation
+  autoindent = true,
+  expandtab = false,
+  tabstop = 4,
+  shiftwidth = 2,
 }
 
 vim.opt.shortmess:append "c"
