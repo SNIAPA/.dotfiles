@@ -2,8 +2,7 @@ return  { 'folke/which-key.nvim',
   config = function ()
     local wk = require("which-key")
 
-
-	wk.add(
+    wk.add(
   {
     { "<leader>C", "<cmd>bd<CR>", desc = "close buffer and window", nowait = true, remap = false },
     { "<leader>L", group = "lsp", nowait = true, remap = false },
@@ -11,7 +10,7 @@ return  { 'folke/which-key.nvim',
     { "<leader>Lm", "<cmd>Mason<CR>", desc = "mason", nowait = true, remap = false },
     { "<leader>Q", "<cmd>wqall!<CR>", desc = "close buffer", nowait = true, remap = false },
     { "<leader>c", "<cmd>bn|:bd#<CR>", desc = "close buffer", nowait = true, remap = false },
-    { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "File Explorer", nowait = true, remap = false },
+    { "<leader>e", "<cmd>Neotree toggle<CR>", desc = "File Explorer", nowait = true, remap = false },
     { "<leader>f", "<cmd>Telescope find_files<CR>", desc = "files", nowait = true, remap = false },
     { "<leader>h", "<cmd>nohlsearch<CR>", desc = "no highlight", nowait = true, remap = false },
     { "<leader>l", group = "lsp actions", nowait = true, remap = false },
@@ -28,7 +27,7 @@ return  { 'folke/which-key.nvim',
     { "<leader>t", group = "Telescope", nowait = true, remap = false },
     { "<leader>tg", "<cmd>Telescope live_grep<CR>", desc = "grep", nowait = true, remap = false },
     { "<leader>tt", "<cmd>Telescope treesitter<CR>", desc = "tags", nowait = true, remap = false },
-  }
-	)
+  })
+
   end
 }
