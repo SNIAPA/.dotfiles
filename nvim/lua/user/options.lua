@@ -34,7 +34,7 @@ local options = {
   shell = '/usr/bin/zsh',
   -- indetation
   autoindent = true,
-  expandtab = false,
+  expandtab = true,
   tabstop = 4,
   shiftwidth = 2,
 }
