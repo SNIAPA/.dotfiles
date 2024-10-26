@@ -1,6 +1,7 @@
 return { 'nvim-treesitter/nvim-treesitter',
   run = ':TSUpdate',
   config = function ()
+    require'nvim-treesitter.install'.compilers = { "clang" }
     require'nvim-treesitter.configs'.setup {
       sync_install = false,
 

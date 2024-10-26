@@ -31,7 +31,7 @@ local options = {
   guifont = "Hack Nerd Font:size=8",
   cc = "80",
 	termguicolors = true,
-  shell = '/usr/bin/zsh',
+  -- shell = '/usr/bin/zsh',
   -- indetation
   autoindent = true,
   expandtab = true,
