@@ -1,34 +1,40 @@
 general {
-        colors = true
-        interval = 1
-        separator = "  "
+    colors = true
+    interval = 1
+    separator = "  "
 }
 
-order += "ethernet ham0"
 order += "memory"
 order += "load"
+order += "battery 0"
 order += "time local"
 
-ethernet ham0 {
-        format_up = "󰈁 %ip (%speed)"
-        color_good = "#FFFFFF"
-        format_down = "󰈂"
-}
-
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
-        hide_if_equals_localtime = true
+    format = "%Y-%m-%d %H:%M:%S"
+    hide_if_equals_localtime = true
 }
 
 load {
-        format = "󰍛 %5min"
+    format = "󰍛 %5min"
 }
+
 memory {
-        format = " %used"
-        threshold_degraded = "10%"
-        format_degraded = "MEMORY: %free"
+    format = " %used"
+    threshold_degraded = "10%"
+    format_degraded = "MEMORY: %free"
 }
 
 read_file uptime {
-        path = "/proc/uptime"
+    path = "/proc/uptime"
+}
+
+
+battery 0 {
+    format = "%status %percentage"
+    format_down = "󰂃"
+    status_chr = "󰂄"
+    status_unk = "󰂑"
+    status_full = "󰁹"
+    status_idle = "󰂄"
+    low_threshold = 10
 }

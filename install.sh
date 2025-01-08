@@ -1,7 +1,7 @@
 #!/bin/bash
 pushd "$(dirname "$0")"
 
-configs=("dunst zsh" "i3" "i3status" "picom" "conky" "wallpapers" "rofi" "nvim" "alacritty")
+configs=("scripts" "dunst" "i3" "i3status" "picom" "conky" "wallpapers" "rofi" "nvim" "alacritty")
 
 for config in "${configs[@]}"; do 
 
@@ -13,5 +13,8 @@ done
 echo "linking tmux"
 rm -rf $(realpath ~/)"/.tmux.conf"
 ln -s $(realpath ./"tmux/.tmux.conf") $(realpath ~/)"/.tmux.conf"
+echo "linking zsh"
+rm -rf $(realpath ~/)"/.zshrc"
+ln -s $(realpath ./"zsh/.zshrc") $(realpath ~/)"/.zshrc"
 
 echo "DONE"

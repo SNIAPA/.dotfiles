@@ -28,10 +28,21 @@ plugins=(
 
 # aliases
 alias nv="nvim"
+alias tnv="~/.config/scripts/start_tmux_neovim.sh"
 alias sudo="sudo "
 alias ls='ls --color=auto'
 alias la='ls -la --color=auto'
-alias ta='tmux attach'
+
+# tmux 
+t() {
+    local preset=$1
+    if [ -z "$preset" ]; then
+        echo "Usage: ts <preset_name>"
+        return 1
+    fi
+
+    tmuxp load ~/.tmuxp/$preset.yaml
+}
 
 # prompt
 parse_git_branch() {
@@ -58,6 +69,9 @@ SAVEHIST=1000
 setopt INC_APPEND_HISTORY
 
 #path
-PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.dotfiles/scripts:$HOME/.local/bin:$PATH"
 
 source $HOME/.bashrc
+
+# tmuxp
+export DISABLE_AUTO_TITLE='true'

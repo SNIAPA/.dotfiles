@@ -1,13 +1,13 @@
-local opts = { noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
 -- Leader key
-keymap("","<Space>","<Nop>", opts)
+keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes 
+-- Modes
 --  noemal_mode = "n"
 --  insert_mode = "i"
 --  visual_mode = "v"
@@ -36,12 +36,13 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", ":m .+1<CR>", opts)
 keymap("n", "<A-k>", ":m .-2<CR>", opts)
 
--- Make x not copy
+-- Make x,p not copy
 keymap("n", "x", "\"_x", opts)
+keymap("v", "p", "P", opts)
 
--- Insert 
+-- Insert
 -- Press jk quickly to to exit insert mode
-keymap("i", "jk", "<ESC>",opts)
+keymap("i", "jk", "<ESC>", opts)
 
 -- Visual
 -- Stau in vusual mode after changing indent

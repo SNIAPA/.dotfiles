@@ -1,5 +1,7 @@
 # Font for window tles
-font pango:Hack mono normal 12px
+
+font pango:Hack Nerd Font 12px
+
 
 # Imports
 include binds.conf
@@ -47,3 +49,9 @@ bar {
     urgent_workspace #ffffff #000000 #cccccc
   }
 }
+
+# disable main monitor 
+exec --no-startup-id ~/.config/i3/monitor_swap.sh
+exec --no-startup-id i3-msg 'workspace 1'
+
+include workspace.conf
