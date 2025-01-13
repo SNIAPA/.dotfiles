@@ -29,6 +29,7 @@ return {
           }
         end,
         ["clangd"] = require("lsp.clangd"),
+        ["rust_analyzer"] = require("lsp.rust_analyzer")
       }
     }
   end
