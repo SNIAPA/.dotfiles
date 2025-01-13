@@ -10,13 +10,8 @@ return {
 
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-    local on_attach = function(client, bufnr)
-      local bufopts = { noremap = true, silent = true, buffer = bufnr }
-      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-      vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-    end
 
+    local on_attach = require("..lsp.on_attach");
     mason_lspconfig.setup {
 
       ensure_installed = {},

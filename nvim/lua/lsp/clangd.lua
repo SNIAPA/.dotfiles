@@ -1,4 +1,7 @@
 return function()
+
+  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
   local util = require('lspconfig.util')
   local root_files = {
     '.clangd',
@@ -19,15 +22,12 @@ return function()
       "--compile_args_from=filesystem",
       "--completion-parse=always",
       "--completion-style=bundled",
-      "--cross-file-rename",
       "--debug-origin",
       "--enable-config",
       "--fallback-style=Qt",
-      "--folding-ranges",
       "--function-arg-placeholders",
       "--header-insertion=iwyu",
       "--pch-storage=memory",
-      "--suggest-missing-includes",
       "-j=4", -- number of workers
       "--log=error",
       -- "--resource-dir="
@@ -41,11 +41,7 @@ return function()
       compilationDatabasePath = vim.fn.getcwd() .. "/build",
     },
     capabilities = require('cmp_nvim_lsp').default_capabilities(),
-    on_attach = function(client, bufnr)
-      local bufopts = { noremap = true, silent = true, buffer = bufnr }
-      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-    end
+    on_attach = require('../lsp/on_attach'),
 
 
   }
