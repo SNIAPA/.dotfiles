@@ -14,3 +14,6 @@ else
     # No external monitor, enable the laptop monitor
     xrandr --output "$LAPTOP_MONITOR" --auto
 fi
+
+# Fix wallpaper
+nitrogen --set-zoom-fill $HOME/.config/wallpapers/wallpaper.png
