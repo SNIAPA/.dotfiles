@@ -3,7 +3,7 @@ return function()
 
   require("lspconfig").rust_analyzer.setup {
     checkOnSave = {
-      command = "clippy --fix --allow-dirty --allow-staged",
+      command = "cargo clippy --fix --allow-dirty --allow-staged",
     },
     capabilities = capabilities,
     on_attach = require('../lsp/on_attach'),

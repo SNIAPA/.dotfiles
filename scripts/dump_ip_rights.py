@@ -68,8 +68,8 @@ def main():
     one_month_ago = datetime.now() - timedelta(days=30)
 
     print_author_commits(repo, author_name, author_email, one_month_ago)
-    print_other_contributors(repo, author_name, author_email, one_month_ago)
     print_repository_url(repo)
+    print_other_contributors(repo, author_name, author_email, one_month_ago)
 
 if __name__ == "__main__":
     main()
