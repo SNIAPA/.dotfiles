@@ -1,9 +1,3 @@
-local get_rust_gdb_path = function()
-  local toolchain_location = string.gsub(vim.fn.system("rustc --print sysroot"), "\n", "")
-  local rustgdb = toolchain_location .. "/bin/rust-gdb"
-  return rustgdb
-end
-
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
 local conf = require("telescope.config").values
@@ -63,57 +57,46 @@ return {
   config = function()
     local dap = require('dap')
 
-    -- Rust configuration
-    dap.adapters.rust_gdb = {
-      type = "executable",
-      args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
-      command = "rust-gdb"
-      --executable = {
-      --  command = get_rust_gdb_path(),
-      --}
+    dap.adapters.codelldb = {
+      type = "server",
+      port = "${port}",
+      executable = {
+        command = "codelldb", -- I installed codelldb through mason.nvim
+        args = {"--port", "${port}"},
+      },
     }
 
     dap.configurations.rust = {
       {
         name = "Launch",
-        type = "rust_gdb",
+        type = "codelldb",
         request = "launch",
         program = find_program,
         args = {},
         cwd = '${workspaceFolder}',
-        stopAtEntry = true,
-        environment = {},
-        -- externalConsole = true,
-        setupCommands = {
-          {
-            description = "Setup to resolve symbols",
-            text = "set sysroot /",
-            ignoreFailures = false,
-          },
-          {
-            description = "Enable pretty-printing for gdb",
-            text = "-enable-pretty-printing",
-            ignoreFailures = false,
-          },
-        },
+        stopOnEntry = true,
       },
       {
         name = "Select and attach to process",
-        type = "rust_gdb",
+        type = "codelldb",
         request = "attach",
         program = find_program,
         pid = find_pid,
         cwd = '${workspaceFolder}'
       },
       {
-        name = 'Attach to gdbserver :1234',
-        type = 'rust_gdb',
+        name = 'Attach to server 1234',
+        type = 'codelldb',
         request = 'attach',
-        target = 'localhost:1234',
+        connect = {
+          port = 1234,
+          host = 'localhost',
+        },
         program = find_program,
         cwd = '${workspaceFolder}'
       },
     }
+
     dap.defaults.fallback.external_terminal = {
       command = '/usr/bin/alacritty',
       args = { '-e' },
