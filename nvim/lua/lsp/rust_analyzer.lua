@@ -12,8 +12,11 @@ return function()
             "--no-deps",
             "-Dclippy::correctness",
             "-Dclippy::complexity",
+            "-Dclippy::style",
             "-Wclippy::perf",
             "-Wclippy::pedantic",
+            "-Wclippy::cargo",
+            "-Wclippy::nursery",
           },
         }
       }
