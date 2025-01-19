@@ -34,7 +34,7 @@ local find_pid = function()
         .new(opts, {
           prompt_title = "Select PID",
           finder = finders.new_oneshot_job(
-            { "ps", "-e", "-o", "pid,comm" }, -- List all processes with PID and command
+            { "ps", "-e", "-o", "pid,comm" },
             {}
           ),
           sorter = conf.generic_sorter(opts),
@@ -42,7 +42,7 @@ local find_pid = function()
             actions.select_default:replace(function()
               actions.close(buffer_number)
               local selected_entry = action_state.get_selected_entry()
-              local pid = string.match(selected_entry[1], "^%s*(%d+)") -- Extract PID from the selected entry
+              local pid = string.match(selected_entry[1], "^%s*(%d+)")
               coroutine.resume(coro, pid)
             end)
             return true
@@ -61,7 +61,7 @@ return {
       type = "server",
       port = "${port}",
       executable = {
-        command = "codelldb", -- I installed codelldb through mason.nvim
+        command = "codelldb",
         args = {"--port", "${port}"},
       },
     }
@@ -74,7 +74,6 @@ return {
         program = find_program,
         args = {},
         cwd = '${workspaceFolder}',
-        stopOnEntry = true,
       },
       {
         name = "Select and attach to process",

@@ -29,18 +29,9 @@ return {
 			},
 			mapping = cmp.mapping.preset.insert({
 				['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-				["<Tab>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						cmp.select_next_item()
-					elseif has_words_before() then
-						cmp.complete()
-					else
-						fallback() -- Indents if no completion item is visible or selectable
-					end
+				["<Tab>"] = cmp.mapping(function()
+					cmp.select_next_item()
 				end, { "i", "s" }),
-				--["<Tab>"] = cmp.mapping(function()
-				--	cmp.select_next_item()
-				--end, { "i", "s" }),
 
 				["<S-Tab>"] = cmp.mapping(function()
 					cmp.select_prev_item()

@@ -1,12 +1,13 @@
-return { 'nvim-lualine/lualine.nvim',
+return {
+  'nvim-lualine/lualine.nvim',
   dependencies = { 'kyazdani42/nvim-web-devicons' },
-  config = function ()
+  config = function()
     require('lualine').setup {
       options = {
         icons_enabled = true,
         theme = 'auto',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         disabled_filetypes = {
           statusline = {},
           winbar = {},
@@ -21,11 +22,11 @@ return { 'nvim-lualine/lualine.nvim',
         }
       },
       sections = {
-        lualine_a = {'buffers'},
+        lualine_a = { 'buffers' },
         lualine_b = {},
         lualine_c = {},
         lualine_x = {},
-        lualine_y = {'branch', 'diff', 'diagnostics'},
+        lualine_y = { 'diagnostics', 'branch' },
         lualine_z = {}
       },
       inactive_sections = {
@@ -43,4 +44,3 @@ return { 'nvim-lualine/lualine.nvim',
     }
   end
 }
-
