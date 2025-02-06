@@ -1,5 +1,6 @@
 return {
   'folke/which-key.nvim',
+  dpendencies = { "j-hui/fidget.nvim" },
   config = function()
     local wk = require("which-key")
 
@@ -56,24 +57,26 @@ return {
     })
 
     local keymaps = {
-      { key = "<leader>C", cmd = "<cmd>Copilot panel<CR>",     desc = "Copilot suggestion window", nowait = true, remap = false },
       {
         key = "<leader>L",
         group = "LSP",
         nowait = true,
         remap = false,
         subkeys = {
-          { key = "i", cmd = "<cmd>LspInfo<CR>",      desc = "LSP Info", nowait = true, remap = false },
-          { key = "l", cmd = "<cmd>Lazy<CR>",         desc = "Lazy",     nowait = true, remap = false },
-          { key = "m", cmd = "<cmd>Mason<CR>",        desc = "Mason",    nowait = true, remap = false },
-          { key = "r", cmd = "<cmd>LspRestart<CR>",   desc = "Restart",    nowait = true, remap = false },
+
+
+          { key = "i", cmd = "<cmd>LspInfo<CR>",    desc = "LSP Info" },
+          { key = "l", cmd = "<cmd>Lazy<CR>",       desc = "Lazy" },
+          { key = "m", cmd = "<cmd>Mason<CR>",      desc = "Mason" },
+          { key = "r", cmd = "<cmd>LspRestart<CR>", desc = "Restart" },
         }
       },
-      { key = "<leader>c", cmd = "<cmd>bn|bd#<CR>", desc = "Close buffer",            nowait = true, remap = false },
+      { key = "<leader>c", cmd = "<cmd>bn|bd#<CR>",                                    desc = "Close buffer",  nowait = true, remap = false },
       {
         key = "<leader>d",
         group = "debug",
         subkeys = {
+
           { key = "c",  cmd = "<cmd>lua require('dap').continue()<CR>",                                                    desc = "Continue" },
           { key = "d",  cmd = "<cmd>lua require('dap').toggle_breakpoint()<CR>",                                           desc = "Toggle Breakpoint" },
           { key = "i",  cmd = "<cmd>lua require('dap').step_into()<CR>",                                                   desc = "Step Into" },
@@ -90,7 +93,8 @@ return {
           { key = "h",  cmd = "<cmd>lua require('dap.ui.widgets').preview()<CR>",                                          desc = "Hover" },
           { key = "re", cmd = "<cmd>lua require('dap.repl').execute(vim.fn.input('Expression: '))<CR>",                    desc = "REPL Execute" },
           { key = "rt", cmd = "<cmd>lua require('dap.repl').toggle()<CR>",                                                 desc = "REPL Toggle" },
-        }
+
+        },
       },
       {
         key = "<leader>dw",
@@ -98,28 +102,31 @@ return {
         nowait = true,
         remap = false,
         subkeys = {
+
           { key = "P", cmd = "<cmd>lua require('dap.ui.widgets').preview()<CR>", desc = "Preview" },
         }
       },
-      { key = "<leader>e", cmd = "<cmd>Neotree toggle<CR>",       desc = "File Explorer", nowait = true, remap = false },
-      { key = "<leader>f", cmd = "<cmd>Telescope find_files<CR>", desc = "Find Files",    nowait = true, remap = false },
-      { key = "<leader>h", cmd = "<cmd>nohlsearch<CR>",           desc = "No Highlight",  nowait = true, remap = false },
+      { key = "<leader>e", cmd = "<cmd>Neotree toggle<CR>",                            desc = "File Explorer", nowait = true, remap = false },
+      { key = "<leader>f", cmd = "<cmd>Telescope find_files<CR>",                      desc = "Find Files",    nowait = true, remap = false },
+      { key = "<leader>h", cmd = "<cmd>nohlsearch<CR><cmd>lua MiniDiff.disable()<CR>", desc = "No Highlight",  nowait = true, remap = false },
       {
         key = "<leader>l",
         group = "LSP Actions",
         nowait = true,
         remap = false,
         subkeys = {
-          { key = "S", cmd = "<cmd>Telescope lsp_workspace_symbols<CR>",                                    desc = "Workspace Symbols",     nowait = true, remap = false },
-          { key = "a", cmd = "<cmd>lua vim.lsp.buf.code_action({apply=true})<CR>",                          desc = "Code Action",           nowait = true, remap = false },
-          { key = "d", cmd = "<cmd>Trouble diagnostics toggle<CR>",                                         desc = "Workspace Diagnostics", nowait = true, remap = false },
-          { key = "f", cmd = "<cmd>lua vim.lsp.buf.format()<CR>",                                           desc = "Format",                nowait = true, remap = false },
-          { key = "i", cmd = "<cmd>lua vim.lsp.buf.hover()<CR>",                                            desc = "Hover Info",            nowait = true, remap = false },
-          { key = "l", cmd = "<cmd>lua vim.diagnostic.open_float()<CR>",                                    desc = "Line Diagnostic",       nowait = true, remap = false },
-          { key = "r", cmd = "<cmd>lua vim.lsp.buf.rename()<CR>",                                           desc = "Rename",                nowait = true, remap = false },
-          { key = "s", cmd = "<cmd>Telescope lsp_document_symbols<CR>",                                     desc = "Document Symbols",      nowait = true, remap = false },
-          { key = "t", cmd = "<cmd>Tagbar<CR>",                                                             desc = "Tagbar",                nowait = true, remap = false },
-          { key = "h", cmd = "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>", desc = "Toggle inlay hints",    nowait = true, remap = false },
+
+
+          { key = "S", cmd = "<cmd>Telescope lsp_workspace_symbols<CR>",                                    desc = "Workspace Symbols" },
+          { key = "a", cmd = "<cmd>lua vim.lsp.buf.code_action({apply=true})<CR>",                          desc = "Code Action" },
+          { key = "d", cmd = "<cmd>Trouble diagnostics toggle<CR>",                                         desc = "Workspace Diagnostics" },
+          { key = "f", cmd = "<cmd>lua vim.lsp.buf.format()<CR>",                                           desc = "Format" },
+          { key = "i", cmd = "<cmd>lua vim.lsp.buf.hover()<CR>",                                            desc = "Hover Info" },
+          { key = "l", cmd = "<cmd>lua vim.diagnostic.open_float()<CR>",                                    desc = "Line Diagnostic" },
+          { key = "r", cmd = "<cmd>lua vim.lsp.buf.rename()<CR>",                                           desc = "Rename" },
+          { key = "s", cmd = "<cmd>Telescope lsp_document_symbols<CR>",                                     desc = "Document Symbols" },
+          { key = "t", cmd = "<cmd>Tagbar<CR>",                                                             desc = "Tagbar" },
+          { key = "h", cmd = "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>", desc = "Toggle inlay hints" },
         }
       },
       { key = "<leader>p", cmd = "<cmd>Lazy<CR>",   desc = "Plugins",           nowait = true, remap = false },
@@ -130,24 +137,51 @@ return {
         nowait = true,
         remap = false,
         subkeys = {
-          { key = "g", cmd = "<cmd>Telescope live_grep<CR>",  desc = "Grep", nowait = true, remap = false },
-          { key = "t", cmd = "<cmd>Telescope treesitter<CR>", desc = "Tags", nowait = true, remap = false },
+          { key = "g", cmd = "<cmd>Telescope live_grep<CR>",  desc = "Grep" },
+          { key = "t", cmd = "<cmd>Telescope treesitter<CR>", desc = "Tags" },
+        }
+      },
+      {
+        key = "<leader>C",
+        group = "Code Companion",
+        mode = { "n", "v" },
+        nowait = true,
+        remap = false,
+        subkeys = {
+          { key = "t", cmd = "<cmd>CodeCompanionChat Toggle <CR>", desc = "Toggle", mode = "n" },
+          { key = "f", cmd = "<cmd>CodeCompanion /lsp<CR>",        desc = "Fix" },
+          { key = "c", cmd = "<cmd>CodeCompanion<CR>",             desc = "Prompt" },
+          { key = "C", cmd = "<cmd>CodeCompanionChat<CR>",         desc = "Chat" },
+
+          {
+            key = "x",
+            cmd = function()
+              local input = vim.fn.input('Enter command: ')
+              vim.cmd('CodeCompanionCmd ' .. input )
+            end,
+            desc = "Cmd assist"
+          }
+
         }
       },
     }
 
-    local function add_keymaps(keymaps, prefix)
+
+    local function add_keymaps(keymaps, prefix, mode, nowait, remap)
       prefix = prefix or ""
       for _, keymap in ipairs(keymaps) do
         local full_key = prefix .. keymap.key
+        local keymap_mode = keymap.mode or mode
+        local keymap_nowait = keymap.nowait or nowait
+        local keymap_remap = keymap.remap or remap
         if keymap.subkeys then
           wk.add({
-            { full_key, group = keymap.group, nowait = keymap.nowait, remap = keymap.remap },
+            { full_key, group = keymap.group, nowait = keymap_nowait, remap = keymap_remap, mode = keymap_mode },
           })
-          add_keymaps(keymap.subkeys, full_key)
+          add_keymaps(keymap.subkeys, full_key, keymap_mode, keymap_nowait, keymap_remap)
         else
           wk.add({
-            { full_key, keymap.cmd, desc = keymap.desc, nowait = keymap.nowait, remap = keymap.remap },
+            { full_key, keymap.cmd, desc = keymap.desc, nowait = keymap_nowait, remap = keymap_remap, mode = keymap_mode },
           })
         end
       end
