@@ -76,7 +76,7 @@ return {
         cwd = '${workspaceFolder}',
       },
       {
-        name = "Select and attach to process",
+        name = "Atach to process",
         type = "codelldb",
         request = "attach",
         program = find_program,
@@ -84,7 +84,7 @@ return {
         cwd = '${workspaceFolder}'
       },
       {
-        name = 'Attach to server 1234',
+        name = 'Attach to server :1234',
         type = 'codelldb',
         request = 'attach',
         connect = {

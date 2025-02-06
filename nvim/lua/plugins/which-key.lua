@@ -56,16 +56,17 @@ return {
     })
 
     local keymaps = {
-      { key = "<leader>C", cmd = "<cmd>bd<CR>",     desc = "Close buffer and window", nowait = true, remap = false },
+      { key = "<leader>C", cmd = "<cmd>Copilot panel<CR>",     desc = "Copilot suggestion window", nowait = true, remap = false },
       {
         key = "<leader>L",
         group = "LSP",
         nowait = true,
         remap = false,
         subkeys = {
-          { key = "i", cmd = "<cmd>LspInfo<CR>", desc = "LSP Info", nowait = true, remap = false },
-          { key = "l", cmd = "<cmd>Lazy<CR>",    desc = "Lazy",     nowait = true, remap = false },
-          { key = "m", cmd = "<cmd>Mason<CR>",   desc = "Mason",    nowait = true, remap = false },
+          { key = "i", cmd = "<cmd>LspInfo<CR>",      desc = "LSP Info", nowait = true, remap = false },
+          { key = "l", cmd = "<cmd>Lazy<CR>",         desc = "Lazy",     nowait = true, remap = false },
+          { key = "m", cmd = "<cmd>Mason<CR>",        desc = "Mason",    nowait = true, remap = false },
+          { key = "r", cmd = "<cmd>LspRestart<CR>",   desc = "Restart",    nowait = true, remap = false },
         }
       },
       { key = "<leader>c", cmd = "<cmd>bn|bd#<CR>", desc = "Close buffer",            nowait = true, remap = false },
@@ -84,7 +85,7 @@ return {
           { key = "v",  cmd = "<cmd>lua require('dapui').toggle()<CR>",                                                    desc = "Toggle DAP UI" },
           { key = "e",  cmd = "<cmd>lua require('dap').disconnect()<CR>",                                                  desc = "Disconnect" },
           { key = "r",  cmd = "<cmd>lua require('dap').restart()<CR>",                                                     desc = "Restart" },
-          { key = "p",  cmd = "<cmd>lua require('dap').pause()<CR>",                                                       desc = "Pause" },
+          { key = "s",  cmd = "<cmd>lua require('dap').pause()<CR>",                                                       desc = "Pause" },
           { key = "r",  cmd = "<cmd>lua require('dap').run_to_cursor()<CR>",                                               desc = "Run to Cursor" },
           { key = "h",  cmd = "<cmd>lua require('dap.ui.widgets').preview()<CR>",                                          desc = "Hover" },
           { key = "re", cmd = "<cmd>lua require('dap.repl').execute(vim.fn.input('Expression: '))<CR>",                    desc = "REPL Execute" },

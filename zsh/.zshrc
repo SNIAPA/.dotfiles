@@ -1,32 +1,28 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="agnoster"
+
 #plugins
 plugins=(
-    git 
+    git
     fzf 
-    ripgrep 
     zsh-autosuggestions 
     autojump 
     asdf 
     archlinux
-    1password
-    adb
-    ag
-    aliases
-    alias-finder
-    ansible
-    ant
     zsh-interactive-cd
     zsh-navigation-tools
     zsh-syntax-highlighting
-    dff-so-fancy
     z
     autojump
-    tig
-    navi
-    peco
-    atuin
+    zsh-github-copilot
 )
 
-# aliases
+bindkey '^ ' zsh_gh_copilot_suggest
+bindkey '^H' zsh_gh_copilot_explain
+
+source $ZSH/oh-my-zsh.sh
+
 alias nv="nvim"
 alias tnv="~/.config/scripts/start_tmux_neovim.sh"
 alias sudo="sudo "
