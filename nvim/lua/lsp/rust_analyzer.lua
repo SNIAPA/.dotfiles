@@ -16,7 +16,6 @@ return function()
             "-Wclippy::perf",
             "-Wclippy::pedantic",
             "-Wclippy::cargo",
-            "-Wclippy::cargo",
           },
         }
       }

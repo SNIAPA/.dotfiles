@@ -12,9 +12,8 @@ if [ -n "$EXTERNAL_MONITOR" ]; then
     xrandr --output "$LAPTOP_MONITOR" --off
 
   if [ -n "$EXTERNAL_MONITOR2" ]; then
-    echo $EXTERNAL_MONITOR2
     xrandr --output "$EXTERNAL_MONITOR2" --auto --primary 
-    echo xrandr --output "$EXTERNAL_MONITOR" --auto --left-of "$EXTERNAL_MONITOR2" --pos 0x0
+    xrandr --output "$EXTERNAL_MONITOR" --auto --left-of "$EXTERNAL_MONITOR2"
   else 
     xrandr --output "$EXTERNAL_MONITOR" --auto
   fi
