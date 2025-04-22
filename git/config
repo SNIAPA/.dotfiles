@@ -1,0 +1,15 @@
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+    prompt = true
+[merge]
+  tool = nvimdiff
+[mergetool]
+  prompt = false
+  keepBackup = false
+[alias]
+  lg = "!lazygit"
+  dash = "!sh -c 'gh dash'"
+  wtn = "!sh -c 'git worktree add --guess-remote -f worktrees/$1'" -
+  wtp = "worktree prune"

@@ -1,7 +1,7 @@
 #!/bin/bash
 pushd "$(dirname "$0")"
 
-configs=("scripts" "dunst" "i3" "i3status" "picom" "conky" "wallpapers" "rofi" "nvim" "alacritty")
+configs=("scripts" "dunst" "i3" "i3status" "picom" "conky" "wallpapers" "rofi" "nvim" "alacritty" "git")
 
 for config in "${configs[@]}"; do 
 
