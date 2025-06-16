@@ -8,15 +8,13 @@ return {
       },
       -- LSP configuration
       server = {
-        on_attach = require('lsp.on_attach'),
+        on_attach = require('lsp.util').on_attach,
+        capabilities = require('lsp.util').capabilities,
         default_settings = {
           ['rust-analyzer'] = {
             checkOnSave = true
           }
         },
-      },
-      -- DAP configuration
-      dap = {
       },
     }
   end

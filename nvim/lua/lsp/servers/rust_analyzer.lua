@@ -1,7 +1,5 @@
 return function()
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-  require 'lspconfig'.rust_analyzer.setup {
+  vim.lsp.config('rust_analyzer', {
     settings = {
       ['rust-analyzer'] = {
         checkOnSave = {
@@ -20,7 +18,5 @@ return function()
         }
       }
     },
-    capabilities = capabilities,
-    on_attach = require('../lsp/on_attach'),
-  }
+  })
 end

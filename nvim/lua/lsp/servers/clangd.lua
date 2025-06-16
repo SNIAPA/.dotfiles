@@ -1,6 +1,5 @@
 return function()
 
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
   local util = require('lspconfig.util')
   local root_files = {
@@ -40,9 +39,5 @@ return function()
     init_options = {
       compilationDatabasePath = vim.fn.getcwd() .. "/build",
     },
-    capabilities = require('cmp_nvim_lsp').default_capabilities(),
-    on_attach = require('../lsp/on_attach'),
-
-
   }
 end

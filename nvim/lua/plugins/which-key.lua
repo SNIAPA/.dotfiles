@@ -141,27 +141,15 @@ return {
           { key = "t", cmd = "<cmd>Telescope treesitter<CR>", desc = "Tags" },
         }
       },
+
       {
         key = "<leader>C",
-        group = "Code Companion",
-        mode = { "n", "v" },
+        group = "Avante",
         nowait = true,
         remap = false,
         subkeys = {
-          { key = "t", cmd = "<cmd>CodeCompanionChat Toggle <CR>", desc = "Toggle", mode = "n" },
-          { key = "f", cmd = "<cmd>CodeCompanion /lsp<CR>",        desc = "Fix" },
-          { key = "c", cmd = "<cmd>CodeCompanion<CR>",             desc = "Prompt" },
-          { key = "C", cmd = "<cmd>CodeCompanionChat<CR>",         desc = "Chat" },
-
-          {
-            key = "x",
-            cmd = function()
-              local input = vim.fn.input('Enter command: ')
-              vim.cmd('CodeCompanionCmd ' .. input )
-            end,
-            desc = "Cmd assist"
-          }
-
+          { key = "c", cmd = "<cmd>AvanteToggle <CR>", desc = "Toggle", },
+          { key = "m", cmd = "<cmd>MCPHub <CR>",       desc = "Mcphub" },
         }
       },
     }
