@@ -8,6 +8,9 @@ return function()
     },
     init_options = {
       hostInfo = 'neovim',
+      preferences = {
+        importModuleSpecifierPreference = 'non-relative',
+      },
     },
   }
 end
