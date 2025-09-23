@@ -3,7 +3,6 @@ return {
   dpendencies = { "j-hui/fidget.nvim" },
   config = function()
     local wk = require("which-key")
-
     wk.setup({
       triggers = { "<auto>", mode = "nixsotc" },
       layout = {

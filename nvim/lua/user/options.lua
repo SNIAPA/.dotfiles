@@ -40,6 +40,7 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
+vim.g.loaded_netrwPlugin = 0
 
 for k, v in pairs(options) do
   vim.opt[k] = v

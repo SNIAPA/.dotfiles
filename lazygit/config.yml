@@ -1,0 +1,9 @@
+git:
+  paging:
+    colorArg: always
+    externalDiffCommand: difft --syntax-highlight=on
+  overrideGpg: true
+  autoStageResolvedConflicts: false
+
+gui:
+  switchTabsWithPanelJumpKeys: true
