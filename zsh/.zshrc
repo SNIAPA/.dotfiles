@@ -24,6 +24,7 @@ bindkey '^H' zsh_gh_copilot_explain
 source $ZSH/oh-my-zsh.sh
 
 alias nv="nvim"
+alias gdash="GH_HOST=$(git remote get-url origin | sed -E 's/git@(.*?):.*/\1/') gh dash"
 alias tnv="~/.config/scripts/start_tmux_neovim.sh"
 alias sudo="sudo "
 alias ls='ls --color=auto'
