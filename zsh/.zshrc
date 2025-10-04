@@ -7,17 +7,14 @@ plugins=(
     git
     fzf 
     zsh-autosuggestions 
-    autojump 
     asdf 
     archlinux
     zsh-interactive-cd
     zsh-navigation-tools
     zsh-syntax-highlighting
     z
-    autojump
     zsh-github-copilot
 )
-
 bindkey '^ ' zsh_gh_copilot_suggest
 bindkey '^H' zsh_gh_copilot_explain
 

@@ -8,12 +8,12 @@ return function()
           extraArgs = {
             "--",
             "--no-deps",
-            "-Dclippy::correctness",
-            "-Dclippy::complexity",
-            "-Dclippy::style",
-            "-Wclippy::perf",
-            "-Wclippy::pedantic",
-            "-Wclippy::cargo",
+            --"-Dclippy::correctness",
+            --"-Dclippy::complexity",
+            --"-Dclippy::style",
+            --"-Wclippy::perf",
+            --"-Wclippy::pedantic",
+            --"-Wclippy::cargo",
           },
         }
       }
