@@ -1,0 +1,8 @@
+[updates]
+command=checkupdates | wc -l
+interval=3600
+label=📦
+[tea-timer]
+command=./tea-timer.sh
+interval=1
+markup=pango

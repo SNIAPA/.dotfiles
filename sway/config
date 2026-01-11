@@ -7,26 +7,6 @@ font pango:Hack Nerd Font 12px
 include binds.conf
 include startup.conf
 
-# Mod key (set as meta key)
-set $mod Mod4
-
-# Workspaces
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
-# movement
-set $left  h
-set $down  j
-set $up    k
-set $right l
 
 # Colors         border       background   text         indicator    child_border
 client.focused   #e5e5e5      #000000      #cccccc      #000000      #e5e5e5
@@ -38,7 +18,7 @@ focus_follows_mouse no
 show_marks yes
 
 bar {
-  status_command i3status
+  status_command i3blocks
   colors {
     background #000000
     statusline #ffffff
@@ -48,10 +28,21 @@ bar {
     inactive_workspace #323232 #000000 #cccccc
     urgent_workspace #ffffff #000000 #cccccc
   }
-}
 
-# disable main monitor 
-exec --no-startup-id ~/.config/i3/monitor_swap.sh
-exec --no-startup-id i3-msg 'workspace 1'
+}
+default_border pixel 1
+default_floating_border pixel 1
+titlebar_border_thickness 1
+titlebar_padding 6 2
+hide_edge_borders smart_no_gaps
+
+for_window [app_id="Alacritty"] opacity 0.8
+
+# Discord
+for_window [app_id="vesktop"] opacity 0.8
+
+# Wofi
+for_window [app_id="rofi"] opacity 0.6
 
 include workspace.conf
+
