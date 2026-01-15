@@ -8,7 +8,7 @@ float length2(vec2 v) {
 
 vec3 getColor(float t, float blend) {
     // Film Noir preset colors
-    vec3 col1 = vec3(1.0, 1.0, 1.0);
+    vec3 col1 = vec3(0.35, 0.35, 0.35);
     vec3 col2 = vec3(0.0, 0.0, 0.0);
     vec3 col3 = vec3(0.0, 0.0, 0.0);
     
@@ -32,7 +32,7 @@ vec3 getColor(float t, float blend) {
 
 vec4 hook() {
     // Film Noir preset settings
-    float speed = 2.0;
+    float speed = 4.0;
     float complexity = 1.0;
     float contrast = 1.0;
     float pixelSize = 16.0;
