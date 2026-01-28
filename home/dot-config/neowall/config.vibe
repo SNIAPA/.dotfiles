@@ -1,0 +1,4 @@
+default {
+  shader ~/.config/wallpaper/wallpaper.frag
+  shader_speed 1.0
+}
