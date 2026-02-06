@@ -236,11 +236,13 @@ bar {
 
 # Borders 
 smart_borders on
+default_border pixel 1
+
 
 bindsym Mod4+g gaps outer all toggle 25; gaps inner all toggle 5
 gaps inner 5
 gaps outer 25
-client.focused #5a9c68 #0d1410 #ffffff #5a9c68 #0d1410
+client.focused #5a9c68 #0d1410 #ffffff #5a9c68 #5a9c68
 client.focused_inactive #0d1410 #0a0a0a #ffffff #0d1410 #0d1410
 client.unfocused #0a0a0a #0a0a0a #ffffff #0d1410 #0d1410
 # primary: #5a9c68
@@ -251,3 +253,4 @@ client.unfocused #0a0a0a #0a0a0a #ffffff #0d1410 #0d1410
 include /etc/sway/config.d/*
 
 exec neowall
+exec swaync

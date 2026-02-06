@@ -4,3 +4,8 @@ vim.opt['list'] = true
 vim.opt['listchars'] = 'eol:¬,tab:> ,trail:·,extends:>,precedes:<'
 vim.opt['relativenumber'] = true
 
+vim.lsp.config['rust-analyzer'] = {
+	cmd = { 'rust-analyzer' },
+	filetypes = { "rs" },
+	root = { "Cargo.toml", "Cargo.lock", '.git'}
+}
