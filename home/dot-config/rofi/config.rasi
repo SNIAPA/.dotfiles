@@ -1,0 +1,161 @@
+/**
+ * Rofi config - compact terminal-like theme
+ * Place this in ~/.config/rofi/config.rasi
+ */
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: false;
+    display-drun: "";
+    display-run: "";
+    display-window: "";
+    drun-display-format: "{name}";
+    font: "monospace 11";
+}
+
+* {
+    /* Your color scheme */
+    bg-col: #0a0a0a22;               /* Black with 85% opacity (D9 = 217/255 = 85%) */
+    bg-col-alt: #0e141022;           /* Alt black with 85% opacity */
+    accent: #0d1410;                 /* Accent color */
+    primary: #5a9c68;                /* Primary green */
+    fg-col: #d4d4d4;                 /* Foreground text */
+    grey: #6c6c6c;                   /* Grey for secondary text */
+    
+    width: 600;
+    foreground-color: @fg-col;
+    alternate-normal-background: @bg-col;
+    alternate-normal-foreground: @fg-col;
+    normal-background: @bg-col;
+    normal-foreground: @fg-col;
+    selected-normal-background: @accent;
+    selected-normal-foreground: @primary;
+    background-color: @bg-col;
+}
+
+window {
+    height: 400px;
+    border: 1px;
+    border-color: @primary;
+    border-radius: 0px;
+    background-color: @bg-col;
+    padding: 4px;
+}
+
+mainbox {
+    background-color: @bg-col;
+    spacing: 0px;
+    padding: 0px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-col;
+    border-radius: 0px;
+    padding: 4px 8px;
+    border: 0px;
+    spacing: 4px;
+}
+
+prompt {
+    background-color: @bg-col;
+    padding: 0px;
+    text-color: @primary;
+    font: "monospace bold 11";
+}
+
+entry {
+    background-color: @bg-col;
+    padding: 0px;
+    text-color: @fg-col;
+    placeholder: "Search...";
+    placeholder-color: @fg-col;
+}
+
+listview {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    columns: 1;
+    lines: 12;
+    background-color: @bg-col;
+    spacing: 0px;
+    scrollbar: false;
+    fixed-height: true;
+}
+
+element {
+    padding: 2px 8px;
+    background-color: @bg-col;
+    text-color: @fg-col;
+    border-radius: 0px;
+    spacing: 0px;
+}
+
+element normal.normal {
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+element alternate.normal {
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+element-icon {
+    size: 0px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color: @primary;
+    border: 0px;
+}
+
+element-text selected {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+scrollbar {
+    width: 0px;
+    handle-width: 0px;
+}
+
+mode-switcher {
+    spacing: 0;
+    background-color: @bg-col;
+    padding: 4px 0px 0px 0px;
+}
+
+button {
+    padding: 4px 8px;
+    background-color: @bg-col;
+    text-color: @grey;
+    border-radius: 0px;
+    margin: 0px 2px;
+    border: 0px;
+}
+
+button selected {
+    background-color: @bg-col;
+    text-color: @primary;
+    border: 0px;
+}
+
+message {
+    background-color: @bg-col;
+    border: 0px;
+    border-radius: 0px;
+    padding: 4px;
+}
+
+textbox {
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
