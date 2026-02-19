@@ -2,9 +2,12 @@
 vim.opt['list'] = true
 vim.opt['listchars'] = 'eol:¬,tab:> ,trail:·,extends:>,precedes:<'
 
+
 vim.opt.signcolumn = "yes"
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+vim.opt.tabstop = 4
 
 vim.g.mapleader = " "
 
