@@ -65,6 +65,7 @@ set $menu rofi -show drun
 #
     # Start a terminal
     bindsym $mod+c exec $term
+    bindsym $mod+q exec "swaync-client -t"
 
     # Kill focused window
     bindsym $mod+Shift+q kill
