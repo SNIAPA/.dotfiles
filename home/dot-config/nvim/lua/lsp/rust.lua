@@ -55,7 +55,6 @@ vim.lsp.config['rust-analyzer'] = {
 			},
 			cargo = {
 				allFeatures = true,
-				loadOutDirsFromCheck = true,
 				features = "all"
 			},
 			completion = {

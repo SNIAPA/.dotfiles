@@ -255,3 +255,6 @@ include /etc/sway/config.d/*
 
 exec neowall
 exec swaync
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+for_window [class="Vintage Story"] max_render_time 1

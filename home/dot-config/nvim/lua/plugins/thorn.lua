@@ -4,7 +4,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			theme = "dark",
+			--theme = "dark",
 			background = "warm",
 			transparent = true,
 			terminal = true,
