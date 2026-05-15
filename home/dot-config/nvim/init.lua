@@ -13,29 +13,6 @@ vim.opt.shiftwidth = 4
 vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>', '<Nop>', { silent = true })
 
--- Lazygit
-vim.keymap.set('n', '<leader>g', function()
-	local prev_buf = vim.api.nvim_get_current_buf()
-	vim.cmd('term lazygit')
-	vim.cmd('startinsert')
-	vim.api.nvim_create_autocmd('TermClose', {
-		buffer = vim.api.nvim_get_current_buf(),
-		once = true,
-		callback = function()
-			vim.cmd('bd!')
-			vim.api.nvim_set_current_buf(prev_buf)
-		end,
-	})
-end)
-
--- Close hidden buffer
---vim.opt.hidden = false
---vim.api.nvim_create_autocmd("BufNew", {
---	callback = function(ev)
---		vim.bo[ev.buf].bufhidden = "wipe"
---	end,
---})
-
 -- Netrw
 vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
