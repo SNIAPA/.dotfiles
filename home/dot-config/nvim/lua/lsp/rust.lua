@@ -61,7 +61,6 @@ vim.lsp.config['rust-analyzer'] = {
 				fullFunctionSignatures = { enable = true },
 				snippets = { custom = snippets },
 				termSearch = { enable = true },
-
 			},
 			diagnostics = {
 				styleLints = { enable = true }
@@ -74,7 +73,7 @@ vim.lsp.config['rust-analyzer'] = {
 				prefSelf = true
 			},
 			files = {
-				--INFO(hwasil): Default is "client" but it misses events like file renames so im trying this
+				-- Default is "client" but it misses events
 				watcher = "server"
 			},
 			hover = {
