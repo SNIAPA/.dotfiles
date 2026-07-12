@@ -45,17 +45,15 @@ local snippets = {
 vim.lsp.config['rust-analyzer'] = {
 	cmd = { 'rust-analyzer' },
 	filetypes = { "rust" },
-	root_markers = { "Cargo.toml", "Cargo.lock", '.git' },
+	root_markers = { "Cargo.lock", '.git' },
 	settings = {
 		["rust-analyzer"] = {
 			check = {
 				command = "clippy",
-				features = "all",
-				workspace = false,
+				workspace = true,
 			},
 			cargo = {
-				allFeatures = true,
-				features = "all"
+				allFeatures = false,
 			},
 			completion = {
 				fullFunctionSignatures = { enable = true },
@@ -70,7 +68,7 @@ vim.lsp.config['rust-analyzer'] = {
 			},
 			assist = {
 				emitMustUse = true,
-				prefSelf = true
+				preferSelf = true
 			},
 			files = {
 				-- Default is "client" but it misses events
