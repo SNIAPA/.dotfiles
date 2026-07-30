@@ -18,6 +18,13 @@ set $term alacritty
 # Your preferred application launcher
 set $menu rofi -show drun
 
+### Input
+#
+input type:keyboard {
+    xkb_layout us,pl
+    xkb_options caps:escape,grp:alt_shift_toggle
+}
+
 ### Key bindings
 #
 # Basics:

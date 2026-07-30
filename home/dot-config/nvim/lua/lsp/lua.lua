@@ -1,8 +1,7 @@
 vim.lsp.config['lua-language-server'] = {
 	cmd = { 'lua-language-server' },
 	filetypes = { "lua" },
-	single_file_support = true,
-	root = {
+	root_markers = {
 		'.luarc.json',
 		'.luarc.jsonc',
 		'.luacheckrc',
@@ -12,8 +11,15 @@ vim.lsp.config['lua-language-server'] = {
 		'selene.yml',
 		'.git',
 	},
-	runtime = {
-		version = 'LuaJIT',
+	settings = {
+		Lua = {
+			runtime = {
+				version = 'LuaJIT',
+			},
+			workspace = {
+				checkThirdParty = false,
+			},
+		},
 	},
 }
 

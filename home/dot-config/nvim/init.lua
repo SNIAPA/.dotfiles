@@ -9,19 +9,12 @@ vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>', '<Nop>', { silent = true })
 
 -- Netrw
-vim.api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		if vim.fn.argc() == 0 then
-			vim.cmd("edit .")
-		end
-	end
-})
-
 vim.g.netrw_banner = 0
 
 -- Add line numbers to netrw
