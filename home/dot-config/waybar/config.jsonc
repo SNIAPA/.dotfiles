@@ -10,7 +10,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray"],
+    "modules-right": ["custom/aur-updates", "pulseaudio", "network", "cpu", "memory", "battery", "tray"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -61,6 +61,15 @@
     "tray": {
         "icon-size": 18,
         "spacing": 8
+    },
+
+    "custom/aur-updates": {
+        "exec": "~/.local/bin/aur-updates",
+        "return-type": "json",
+        "interval": 3600,
+        "tooltip": true,
+        "on-click": "alacritty -e python3 ~/.local/bin/pkg-review",
+        "on-click-right": "alacritty -e sh -c 'paru -Sua; echo; echo --- done, press enter to close ---; read -r _'"
     }
 }
 

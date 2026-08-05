@@ -1,0 +1,30 @@
+#!/bin/sh
+# Output AUR/package info for waybar custom module.
+# Format: <outdated>:(<explicit>)<total>
+
+outdated=$(paru -Qu --aur 2>/dev/null)
+if [ -n "$outdated" ]; then
+    outdated_count=$(printf '%s\n' "$outdated" | wc -l)
+else
+    outdated_count=0
+fi
+
+explicit_count=$(pacman -Qe 2>/dev/null | wc -l)
+total_count=$(pacman -Q 2>/dev/null | wc -l)
+
+if [ "$outdated_count" -eq 0 ]; then
+    outdated_text="0"
+elif [ "$outdated_count" -lt 5 ]; then
+    outdated_text="<span foreground='#e0c068'>${outdated_count}</span>"
+else
+    outdated_text="<span foreground='#d35858'>${outdated_count}</span>"
+fi
+
+if [ -n "$outdated" ]; then
+    tooltip=$(printf '%s' "$outdated" | awk '{printf "%s\\n", $0}')
+else
+    tooltip="All AUR packages up to date"
+fi
+
+printf '{"text": "%s:(%d)%d", "tooltip": "%s"}\n' \
+    "$outdated_text" "$explicit_count" "$total_count" "$tooltip"
