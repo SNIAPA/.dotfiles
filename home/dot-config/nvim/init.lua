@@ -26,8 +26,12 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 require "config-lazy"
 
 -- Lsp
+vim.lsp.config('*', {
+	capabilities = require('blink.cmp').get_lsp_capabilities(),
+})
 require "lsp.rust"
 require "lsp.lua"
+require "lsp.wgsl"
 require "lsp.mappings"
 
 -- Mappings
