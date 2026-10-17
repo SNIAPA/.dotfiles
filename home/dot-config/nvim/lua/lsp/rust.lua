@@ -45,6 +45,9 @@ local snippets = {
 vim.lsp.config['rust-analyzer'] = {
 	cmd = { 'rust-analyzer' },
 	filetypes = { "rust" },
+	capabilities = {
+		experimental = { colorDiagnosticOutput = true },
+	},
 	root_markers = { "Cargo.lock", '.git' },
 	settings = {
 		["rust-analyzer"] = {

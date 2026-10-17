@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd('DiagnosticChanged', {
 	callback = function(args)
-		vim.diagnostic.setqflist({ open = false })
+		require('lsp.quickfix').set_diagnostics()
 
 		for _, win in ipairs(vim.fn.win_findbuf(args.buf)) do
 			vim.diagnostic.setloclist({ open = false, winnr = win })
@@ -12,7 +12,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(args)
 		local opts = { buffer = args.buf }
 
-		vim.keymap.set('n', 'gc', vim.diagnostic.setqflist, opts)
+		vim.keymap.set('n', 'gc', function()
+			require('lsp.quickfix').set_diagnostics()
+			vim.cmd.copen()
+		end, opts)
 
 		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
