@@ -33,5 +33,6 @@ require "lsp.rust"
 require "lsp.lua"
 require "lsp.wgsl"
 require "lsp.mappings"
+require "lsp.quickfix"
 
 -- Mappings
